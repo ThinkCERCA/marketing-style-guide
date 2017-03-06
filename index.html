@@ -19,28 +19,112 @@
 	<div class="section" id="logos">
 		<h2 class="section-hed">Logos</h2>
 		{{ logos_explained|markdown }}
+		<h3>The Stacked Logo</h3>
+		{{ stacked_logo_explained|markdown }}
 		<div class="section-row">
-			{% for item in style if item.section == 'logos' %}
-			<div class="section-row-box {{ item.section }}">
+			{% for item in style if item.type == 'stacked' %}
+			<div class="section-row-box {{ item.section }} {{ item.type }}">
 				<div class="section-row-box-swatch">
-					<img src="img/{{ item.example_code }}">
+					<img src="img/{{ item.value }}.svg">
 				</div>
 				<!-- {{ item.use_case|markdown }} -->
-				<br>
-				<p>Download as:
-				<a href="img/{{ item.value }}.svg" download="{{ item.value }}.svg" class="download-button">SVG</a>
-				<a href="img/{{ item.value }}.png" download="{{ item.value }}.svg" class="download-button">PNG</a>
-				<a href="img/{{ item.value }}.jpg" download="{{ item.value }}.svg" class="download-button">JPG</a></p>
+				<div class="section-row-box-text-download">
+					<p>Download as:
+					<a href="img/{{ item.value }}.svg" download="{{ item.value }}.svg" class="download-button">SVG</a>
+					{% if item.example_code == 'png and jpg' %}
+						<a href="img/{{ item.value }}.png" download="{{ item.value }}.svg" class="download-button">PNG</a>
+						<a href="img/{{ item.value }}.jpg" download="{{ item.value }}.svg" class="download-button">JPG</a>
+					{% endif %}
+				</p>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<h3>The Horizontal Logo</h3>
+		{{ horizontal_logo_explained|markdown }}
+		<div class="section-row">
+			{% for item in style if item.type == 'horizontal' %}
+			<div class="section-row-box {{ item.section }} {{ item.type }}">
+				<div class="section-row-box-swatch">
+					<img src="img/{{ item.value }}.svg">
+				</div>
+				<!-- {{ item.use_case|markdown }} -->
+				<div class="section-row-box-text-download">
+					<p>Download as:
+					<a href="img/{{ item.value }}.svg" download="{{ item.value }}.svg" class="download-button">SVG</a>
+					{% if item.example_code == 'png and jpg' %}
+						<a href="img/{{ item.value }}.png" download="{{ item.value }}.svg" class="download-button">PNG</a>
+						<a href="img/{{ item.value }}.jpg" download="{{ item.value }}.svg" class="download-button">JPG</a>
+					{% endif %}
+				</p>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<h3>The Simple Logo</h3>
+		{{ simple_logo_explained|markdown }}
+		<div class="section-row">
+			{% for item in style if item.type == 'simple' %}
+			<div class="section-row-box {{ item.section }} {{ item.type }}">
+				<div class="section-row-box-swatch">
+					<img src="img/{{ item.value }}.svg">
+				</div>
+				<!-- {{ item.use_case|markdown }} -->
+				<div class="section-row-box-text-download">
+					<p>Download as:
+					<a href="img/{{ item.value }}.svg" download="{{ item.value }}.svg" class="download-button">SVG</a>
+					{% if item.example_code == 'png and jpg' %}
+						<a href="img/{{ item.value }}.png" download="{{ item.value }}.svg" class="download-button">PNG</a>
+						<a href="img/{{ item.value }}.jpg" download="{{ item.value }}.svg" class="download-button">JPG</a>
+					{% endif %}
+				</p>
+				</div>
 			</div>
 			{% endfor %}
 		</div>
 	</div>
 	<div class="section" id="icons">
 		<h2 class="section-hed">Icons</h2>
-		<h3>Material Design Icons</h3>
-		{{ icons_explained|markdown }}
+		<h3 class="section-subhed">CERCA Icons</h3>
+		<div class="section-row">
+			{% for item in style if item.section == 'icons' and item.type == 'cerca' %}
+			<div class="section-row-box {{ item.type }}-{{ item.section }}">
+				<div class="section-row-box-swatch">
+					<img src="img/{{ item.value }}.svg">
+				</div>
+				<div class="section-row-box-text">
+					<h4>{{ item.denotes }}</h4>
+					<div class="section-row-box-text-download">
+					<p>Download as:
+						<a href="img/{{ item.value }}.svg" download="{{ item.value }}.svg" class="download-button">SVG</a>
+					</p>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<h3 class="section-subhed">Subject Icons</h3>
+		<div class="section-row">
+			{% for item in style if item.section == 'icons' and item.type == 'subject' %}
+			<div class="section-row-box {{ item.type }}-{{ item.section }}">
+				<div class="section-row-box-swatch">
+					<img src="img/{{ item.value }}.svg">
+				</div>
+				<div class="section-row-box-text">
+					<h4>{{ item.denotes }}</h4>
+					<div class="section-row-box-text-download">
+					<p>Download as:
+						<a href="img/{{ item.value }}.svg" download="{{ item.value }}.svg" class="download-button">SVG</a>
+					</p>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<h3 class="section-subhed">Material Design Icons</h3>
+		{{ material_icons_explained|markdown }}
 		<div class="section-row section-row-icons">
-			{% for item in style if item.section == 'icons' %}
+			{% for item in style if item.section == 'icons' and item.type == 'resource' %}
 			<div class="section-row-box {{ item.section }}">
 				<div class="section-row-box-swatch">
 					<img src="img/{{ item.value }}.svg">
@@ -54,6 +138,7 @@
 			</div>
 			{% endfor %}
 		</div>
+		<caption><em>Scroll right ></em></caption>
 	</div>
 	<div class="section" id="colors">
 		<h2 class="section-hed">Colors</h2>

@@ -196,6 +196,16 @@ html body .index a:hover {
   }
 }
 
+.section-row-box.logos.stacked {
+  width: 30%;
+}
+
+@media (max-width: 992px) {
+  .section-row-box.logos.stacked {
+    width: 100%;
+  }
+}
+
 @media (max-width: 992px) {
   .section-row-box.buttons,
   .section-row-box.logos {
@@ -224,7 +234,6 @@ html body .index a:hover {
     width: 100%;
   }
 }
-
 
 .section-row-box.one-color {
   float: left; }
@@ -292,25 +301,37 @@ a.download-button:hover {
   font-size: 14px;
 }
 
+.section-row-box-text-download {
+  line-height: 30px;
+}
+
 .section-row-box-text {
   padding: 5px 5px 0 5px;
   text-align: center; 
 }
 
-.section-row-box-text p {
-  font-weight: 600; 
-}
-
 .section-row-full {
   background-color: #f2f4f5;
-    border-radius: 4px;
-    display: block;
-    float: left;
-    margin: 0 0 20px 0;
-    padding: 20px;
-    width: 100%;
+  border-radius: 4px;
+  display: block;
+  float: left;
+  margin: 0 0 20px 0;
+  padding: 20px;
+  width: 100%;
 }
 
-/*# sourceMappingURL=styles.css.map */
+.section-row-box.logos img {
+  margin-bottom: 10px;
+}
 
-/*# sourceMappingURL=style.scss.map */
+.section-row-box.logos.simple img {
+  width: 120px;
+}
+
+.section-row-box.subject-icons .section-row-box-swatch {
+  min-height: 120px;
+}
+
+.section-row-box.subject-icons .section-row-box-swatch img {
+  width: 80px;
+}
