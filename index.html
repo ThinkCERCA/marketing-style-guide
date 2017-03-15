@@ -9,6 +9,7 @@
 	      <li><a class="index-chapter" href="#icons">Icons</a></li>
 	      <li><a class="index-chapter" href="#colors">Colors</a></li>
 	      <li><a class="index-chapter" href="#typography">Typography</a></li>
+	      <li><a class="index-chapter" href="#typography">Links</a></li>
 	      <li><a class="index-chapter" href="#buttons">Buttons</a></li>
 	    </ul>   
 	  </aside>
@@ -263,16 +264,42 @@
 		<h2 class="section-hed">Typography</h2>
 		{{ typography_explained|markdown }}
 		<div class="code-block-multiple-lines">{{ typography_code_roboto }}</div>
+		<br>
 		<span class="code-block-single-line">{{ typography_code }}</span>
 		<div class="section-row">
 		{% for item in style if item.section == 'typography' %}
 			<div class="section-row-full">
-			<strong>{{ item.denotes|markdown }}</strong>
+			<h3>{{ item.denotes|process_text }}{% if item.site %}: {{ item.site }}{% endif %}</h3>
 			<{{ item.denotes }} class="{{ item.type }}">{{ item.value }}</{{ item.denotes }}>
-			<span class="code-block-single-line">{{ item.example_code }}</span>
-			<br>
+			{% if item.use_case %}
 			<br>
 			<p>{{ item.use_case|process_text }}</p>
+			{% endif %}
+			{% if item.example_code %}
+			<br>
+			<span class="code-block-single-line">{{ item.example_code }}</span>
+			{% endif %}
+			</div>
+		{% endfor %}
+		</div>
+	</div>
+	<div class="section" id="links">
+		<h2 class="section-hed">Links</h2>
+		<div class="section-row">
+		{% for item in style if item.section == 'links' %}
+			<div class="section-row-full">
+			<h3>{{ item.value }}</h3>
+			<p>Curabitur purus tortor, <a href="" target="_blank">pulvinar quis diam vel</a>, ornare facilisis tortor.</p>
+			{% if item.denotes %}
+			<br>
+			<span class="code-block-single-line">{{ item.denotes }}</span>
+			{% endif %}
+			{% if item.example_code %}
+			<br>
+			<br>
+			<p>On hover:</p>
+			<span class="code-block-single-line">{{ item.example_code }}</span>
+			{% endif %}
 			</div>
 		{% endfor %}
 		</div>

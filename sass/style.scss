@@ -13,7 +13,7 @@ html body a:hover {
 }
 
 /* Default colors */
-.audience, .base-gray {
+.audience, .base-gray, .shade-darker {
   border-radius: 4px;
   color: white;
   padding: 1px 5px 1px 5px;
@@ -27,6 +27,47 @@ $audience: #307fe2;
 $base-gray: #5b6770;
 .base-gray {
   background-color: $base-gray;
+}
+
+.shade-darker {
+  background-color: #444d54;
+} 
+
+html body p, .p-hubspot {
+  color: #5b6770;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 26px;
+  margin: 0 0 10px 0;
+  text-size-adjust: 100%;
+  word-wrap: break-word;
+  -webkit-font-smoothing:antialiased;
+}
+
+html body h1, .blog-title {
+  color: #5b6770;    
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.38;
+}
+
+html body h2 {
+  color: #5b6770;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 38px;
+  margin: 0 0 10px 0; 
+}
+
+html body h3 {
+  font-size: 20px;
+  line-height: 27px;
+}
+
+html body h4 {
+  font-size: 18px;
+  line-height: 28px;
 }
 
 /* Overarching styles */
@@ -60,21 +101,9 @@ $base-gray: #5b6770;
   }
 }
 
-.blog-title {
-  color: #5b6770;    
-  font-size: 34px;
-  font-weight: 500;
-  line-height: 1.38;
-}
-
 html body {
   color: #5b6770;
   font-family: "Roboto", Helvetica, Arial, sans-serif; }
-
-p {
-  font-size: 16px;
-  font-weight: 400;
-}
 
 .wp-heading {
   color: #4a4a4a;
@@ -154,6 +183,10 @@ html body .index a:hover {
 
 .section#about {
   border-top: none;
+}
+
+h2.section-hed {
+  padding: 20px 0 0 0;
 }
 
 .section-row {
@@ -264,7 +297,7 @@ a.download-button:focus {
 }
 
 .section-row-box-button.sign-up {
-  font-style: uppercase;
+  text-transform: uppercase;
   font-weight: 600; }
 
 .section-row-box-button:hover,
@@ -303,6 +336,7 @@ a.download-button:hover {
 
 .section-row-box-text-download {
   line-height: 30px;
+  text-align: center;
 }
 
 .section-row-box-text {
@@ -318,6 +352,10 @@ a.download-button:hover {
   margin: 0 0 20px 0;
   padding: 20px;
   width: 100%;
+  h3:first-of-type {
+    border-bottom: 1px solid #c6ccd1;
+    padding-bottom: 10px;
+  }
 }
 
 .section-row-box.logos img {
