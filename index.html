@@ -1,4 +1,4 @@
-{% extends "_base.html" %}
+{% extends "_blueprint/_base.html" %}
 {% block content %}
 
 <div class="style-guide">
@@ -32,8 +32,8 @@
 					<p>Download as:
 					<a href="img/{{ item.value }}.svg" download="{{ item.value }}.svg" class="download-button">SVG</a>
 					{% if item.example_code == 'png and jpg' %}
-						<a href="img/{{ item.value }}.png" download="{{ item.value }}.svg" class="download-button">PNG</a>
-						<a href="img/{{ item.value }}.jpg" download="{{ item.value }}.svg" class="download-button">JPG</a>
+						<a href="img/{{ item.value }}.png" download="{{ item.value }}.png" class="download-button">PNG</a>
+						<a href="img/{{ item.value }}.jpg" download="{{ item.value }}.jpg" class="download-button">JPG</a>
 					{% endif %}
 				</p>
 				</div>
@@ -53,8 +53,8 @@
 					<p>Download as:
 					<a href="img/{{ item.value }}.svg" download="{{ item.value }}.svg" class="download-button">SVG</a>
 					{% if item.example_code == 'png and jpg' %}
-						<a href="img/{{ item.value }}.png" download="{{ item.value }}.svg" class="download-button">PNG</a>
-						<a href="img/{{ item.value }}.jpg" download="{{ item.value }}.svg" class="download-button">JPG</a>
+						<a href="img/{{ item.value }}.png" download="{{ item.value }}.png" class="download-button">PNG</a>
+						<a href="img/{{ item.value }}.jpg" download="{{ item.value }}.jpg" class="download-button">JPG</a>
 					{% endif %}
 				</p>
 				</div>
@@ -74,8 +74,8 @@
 					<p>Download as:
 					<a href="img/{{ item.value }}.svg" download="{{ item.value }}.svg" class="download-button">SVG</a>
 					{% if item.example_code == 'png and jpg' %}
-						<a href="img/{{ item.value }}.png" download="{{ item.value }}.svg" class="download-button">PNG</a>
-						<a href="img/{{ item.value }}.jpg" download="{{ item.value }}.svg" class="download-button">JPG</a>
+						<a href="img/{{ item.value }}.png" download="{{ item.value }}.png" class="download-button">PNG</a>
+						<a href="img/{{ item.value }}.jpg" download="{{ item.value }}.jpg" class="download-button">JPG</a>
 					{% endif %}
 				</p>
 				</div>
@@ -97,6 +97,7 @@
 					<div class="section-row-box-text-download">
 					<p>Download as:
 						<a href="img/{{ item.value }}.svg" download="{{ item.value }}.svg" class="download-button">SVG</a>
+						<a href="img/{{ item.value }}.png" download="{{ item.value }}.png" class="download-button">PNG</a>
 					</p>
 					</div>
 				</div>
@@ -115,6 +116,7 @@
 					<div class="section-row-box-text-download">
 					<p>Download as:
 						<a href="img/{{ item.value }}.svg" download="{{ item.value }}.svg" class="download-button">SVG</a>
+						<a href="img/{{ item.value }}.png" download="{{ item.value }}.png" class="download-button">PNG</a>
 					</p>
 					</div>
 				</div>
