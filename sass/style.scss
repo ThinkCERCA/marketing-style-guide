@@ -35,7 +35,7 @@ $base-gray: #5b6770;
 
 html body p, .p-hubspot {
   color: #5b6770;
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 26px;
@@ -46,10 +46,11 @@ html body p, .p-hubspot {
 }
 
 html body h1, .blog-title {
-  color: #5b6770;    
+  color: #444d54;
   font-size: 34px;
-  font-weight: 500;
-  line-height: 1.38;
+  font-weight: 400;
+  line-height: 46px;
+  margin-bottom: 10px;
 }
 
 html body h2 {
@@ -103,11 +104,11 @@ html body h4 {
 
 html body {
   color: #5b6770;
-  font-family: "Roboto", Helvetica, Arial, sans-serif; }
+  font-family: "Roboto", Arial, sans-serif; }
 
 .wp-heading {
   color: #4a4a4a;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   font-size: 46px;
   font-weight: 700;
   line-height: 58px;
