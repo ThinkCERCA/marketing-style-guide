@@ -1,0 +1,38 @@
+$roboto: 'Roboto', sans-serif;
+$roboto-slab: 'Roboto Slab', serif;
+$roboto-mono: 'Roboto Mono', monospace;
+$roboto-condensed: 'Roboto Condensed', sans-serif;
+
+// COLORS
+$main-text-color: #4A4A4A;
+$white: #FFFFFF;
+$blue: #307FE2;
+
+.styled-h1 {
+	font-weight: 300;
+	font-family: $roboto-slab;
+	font-size: 40px;
+	line-height: 53px;
+}
+
+.styled-h2 {
+	font-weight: 500;
+	font-family: $roboto;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+%styled-p {
+	font-family: $roboto;
+	font-size: 16px;
+	line-height: 150%;
+}
+
+.styled-p {
+	@extend %styled-p;
+}
+
+.blue-text {
+	color: $blue;
+}
+

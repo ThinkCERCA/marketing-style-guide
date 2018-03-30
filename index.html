@@ -1,326 +1,200 @@
 {% extends "_blueprint/_base.html" %}
 {% block content %}
 
-<div class="style-guide">
-	<aside class="index" id="#top">
-	    <ul>
-	      <li><a class="index-chapter" href="#about">About</a></li>
-	      <li><a class="index-chapter" href="#logos">Logos</a></li>
-	      <li><a class="index-chapter" href="#icons">Icons</a></li>
-	      <li><a class="index-chapter" href="#colors">Colors</a></li>
-	      <li><a class="index-chapter" href="#typography">Typography</a></li>
-	      <li><a class="index-chapter" href="#links">Links</a></li>
-	      <li><a class="index-chapter" href="#buttons">Buttons</a></li>
-	    </ul>   
-	  </aside>
-	<div class="section" id="about">
-		<h1 class="section-hed">ThinkCERCA Style Guide</h1>
-		{{ style_guide_explained|markdown }}
-	</div>
-	<div class="section" id="logos">
-		<h2 class="section-hed">Logos</h2>
-		{{ logos_explained|markdown }}
-		<h3>The Stacked Logo</h3>
-		{{ stacked_logo_explained|markdown }}
-		<div class="section-row">
-			{% for item in style if item.type == 'stacked' %}
-			<div class="section-row-box {{ item.section }} {{ item.type }}">
-				<div class="section-row-box-swatch">
-					<img src="img/{{ item.value }}.svg">
-				</div>
-				<div class="section-row-box-text-download">
-					<p>Download as:
-					<a href="img/{{ item.value }}.svg" download="{{ item.value }}.svg" class="download-button">SVG</a>
-					{% if item.example_code == 'png and jpg' %}
-						<a href="img/{{ item.value }}.png" download="{{ item.value }}.png" class="download-button">PNG</a>
-						<a href="img/{{ item.value }}.jpg" download="{{ item.value }}.jpg" class="download-button">JPG</a>
-					{% endif %}
-				</p>
-				</div>
-			</div>
-			{% endfor %}
+<div class="body-container">
+	<div class="sidebar">
+		<div class="main-logo-container">
+			<a href="/"><img class="main-logo" src="./img/TC-Logo-Primary.svg"></a>
+			<small class="brand-guidelines-small">Brand Guidelines</small>
 		</div>
-		<h3>The Horizontal Logo</h3>
-		{{ horizontal_logo_explained|markdown }}
-		<div class="section-row">
-			{% for item in style if item.type == 'horizontal' %}
-			<div class="section-row-box {{ item.section }} {{ item.type }}">
-				<div class="section-row-box-swatch">
-					<img src="img/{{ item.value }}.svg">
-				</div>
-				<!-- {{ item.use_case|markdown }} -->
-				<div class="section-row-box-text-download">
-					<p>Download as:
-					<a href="img/{{ item.value }}.svg" download="{{ item.value }}.svg" class="download-button">SVG</a>
-					{% if item.example_code == 'png and jpg' %}
-						<a href="img/{{ item.value }}.png" download="{{ item.value }}.png" class="download-button">PNG</a>
-						<a href="img/{{ item.value }}.jpg" download="{{ item.value }}.jpg" class="download-button">JPG</a>
-					{% endif %}
-				</p>
-				</div>
-			</div>
-			{% endfor %}
+		<div class="search-bar-container">
+			<input type="text" placeholder="Search" name="search-bar" id="search-bar">
 		</div>
-		<h3>The Simple Logo</h3>
-		{{ simple_logo_explained|markdown }}
-		<div class="section-row">
-			{% for item in style if item.type == 'simple' %}
-			<div class="section-row-box {{ item.section }} {{ item.type }}">
-				<div class="section-row-box-swatch">
-					<img src="img/{{ item.value }}.svg">
-				</div>
-				<!-- {{ item.use_case|markdown }} -->
-				<div class="section-row-box-text-download">
-					<p>Download as:
-					<a href="img/{{ item.value }}.svg" download="{{ item.value }}.svg" class="download-button">SVG</a>
-					{% if item.example_code == 'png and jpg' %}
-						<a href="img/{{ item.value }}.png" download="{{ item.value }}.png" class="download-button">PNG</a>
-						<a href="img/{{ item.value }}.jpg" download="{{ item.value }}.jpg" class="download-button">JPG</a>
-					{% endif %}
-				</p>
-				</div>
-			</div>
-			{% endfor %}
+		<div class="nav-container" id="nav">
+			<a href="#brand-links" class="nav-section nav-section-active" data-toggle="collapse">Brand</a>
+			<ul id="brand-links" class="nav-dropdown collapse">
+				<li><a href="#brand-guidelines" class="nav-link">Home</a><i class="icon-chevron-right"></i></li>
+				<li><a href="#our-purpose" class="nav-link">Purpose</a><i class="icon-chevron-right"></i></li>
+				<li><a href="#our-promise" class="nav-link">Promise</a><i class="icon-chevron-right"></i></li>
+				<li><a href="#our-principles" class="nav-link">Principles</a><i class="icon-chevron-right"></i></li>
+				<li><a href="#our-mantra" class="nav-link">Mantra</a><i class="icon-chevron-right"></i></li>
+			</ul>
+			<a href="#voice-links" class="nav-section" data-toggle="collapse">Voice</a>
+			<ul id="voice-links" class="nav-dropdown collapse">
+			</ul>
+			<a href="#visual-links" class="nav-section" data-toggle="collapse">Visuals</a>
+			<ul id="visual-links" class="nav-dropdown collapse">
+			</ul>
 		</div>
 	</div>
-	<div class="section" id="icons">
-		<h2 class="section-hed">Icons</h2>
-		<h3 class="section-subhed">CERCA Icons</h3>
-		<div class="section-row">
-			{% for item in style if item.section == 'icons' and item.type == 'cerca' %}
-			<div class="section-row-box {{ item.type }}-{{ item.section }}">
-				<div class="section-row-box-swatch">
-					<img src="img/{{ item.value }}.svg">
-				</div>
-				<div class="section-row-box-text">
-					<h4>{{ item.denotes }}</h4>
-					<div class="section-row-box-text-download">
-					<p>Download as:
-						<a href="img/{{ item.value }}.svg" download="{{ item.value }}.svg" class="download-button">SVG</a>
-						<a href="img/{{ item.value }}.png" download="{{ item.value }}.png" class="download-button">PNG</a>
-					</p>
+	<div class="main">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6" id="brand-guidelines">
+					<div class="col-sm col-sm-offset-1">
+						<div class="brand-guidelines-text-container">
+							<h2 class="styled-h2">THINKCERCA</h2>
+							<h1 class="styled-h1">Brand Guidelines</h1>
+						</div>
+						<p>Last edited January XX, 2018</p>
 					</div>
 				</div>
-			</div>
-			{% endfor %}
-		</div>
-		<h3 class="section-subhed">Subject Icons</h3>
-		<div class="section-row">
-			{% for item in style if item.section == 'icons' and item.type == 'subject' %}
-			<div class="section-row-box {{ item.type }}-{{ item.section }}">
-				<div class="section-row-box-swatch">
-					<img src="img/{{ item.value }}.svg">
-				</div>
-				<div class="section-row-box-text">
-					<h4>{{ item.denotes }}</h4>
-					<div class="section-row-box-text-download">
-					<p>Download as:
-						<a href="img/{{ item.value }}.svg" download="{{ item.value }}.svg" class="download-button">SVG</a>
-						<a href="img/{{ item.value }}.png" download="{{ item.value }}.png" class="download-button">PNG</a>
-					</p>
+				<div class="col-md-6" id="hello-thinker">
+					<div class="col-sm-10 col-sm-offset-1 hello-thinker-body">
+						<h1 class="styled-h1">Hello Thinker.</h1>
+						{{ intro_explained|markdown }}
 					</div>
 				</div>
 			</div>
-			{% endfor %}
-		</div>
-		<h3 class="section-subhed">Material Design Icons</h3>
-		{{ material_icons_explained|markdown }}
-		<div class="section-row section-row-icons">
-			{% for item in style if item.section == 'icons' and item.type == 'resource' %}
-			<div class="section-row-box {{ item.section }}">
-				<div class="section-row-box-swatch">
-					<img src="img/{{ item.value }}.svg">
+			<div class="row">
+				<div class="col-md-6" id="designer-starter-kit">
+					<div class="designer-starter-kit-outline"></div>
+					<div class="col-sm-10 col-sm-offset-1 designer-starter-kit-body">
+						<div class="designer-starter-kit-logo-container">
+							<img src="./img/home/icon-designer-starter-kit-logo.svg">
+						</div>
+						<h2 class="styled-h2 designer-starter-kit-h2 row-title-short">DESIGNER STARTER KIT</h2>
+						{{ designer_kit_explained|markdown }}
+						<button id="designer-starter-kit-btn">Download</button>
+					</div>
 				</div>
-				<div class="section-row-box-text">
-					<h4>{{ item.denotes }}</h4>
-					<div class="code-block-single-line">{{ item.example_code }}</div>
-					<p class="section-row-box-text-download"><a href="img/{{ item.value }}.svg" download="{{ item.value }}.svg" class="download-button">Download as SVG</a></p>
-					<p class="section-row-box-text-download"><a href="{{ item.use_case }}" target="_blank">View on Google</a></p>
-				</div>
+				<div class="col-md-6" id="designer-starter-kit-imgs">
+					<div class="row designer-starter-kit-imgs-row-1"></div>
+					<div class="row designer-starter-kit-imgs-row-2">
+						<div class="col-sm-6 designer-starter-kit-imgs-row-2-left"></div>
+						<div class="col-sm-6 designer-starter-kit-imgs-row-2-right">
+							<h1 class="styled-h1">
+								Aa Bb Cc<br>
+								Dd Ee Ff<br>
+								Gg Hh Ii<br>
+								Jj Kk Ll<br>
+								Mm Nn Oo 
+							</h1>
+						</div>
+					</div>
+				</div>			
 			</div>
-			{% endfor %}
-		</div>
-		<caption><em>Scroll right</em></caption>
-	</div>
-	<div class="section" id="colors">
-		<h2 class="section-hed">Colors</h2>
-		<h3 class="section-subhed">CERCA Colors</h3>
-		{{ cerca_explained|markdown }}
-		<div class="section-row">
-			{% for item in style if item.type == 'cerca-color' %}
-			<div class="section-row-box cerca-brand">
-				<div class="section-row-box-swatch" style="background-color:{{ item.value }};">
-					{{ item.value }}
+			<div class="row">
+				<div class="col-md-6" id="our-purpose">
+					<div class="col-sm-10 col-sm-offset-1">
+						<h2 class="styled-h2 row-title-short blue-text our-purpose-title">OUR PURPOSE</h2>
+						<h1 class="styled-h1 our-purpose-h1">Critical thinking is the catalyst for change.</h1>
+						<div class="our-purpose-body">
+							{{ our_purpose_explained|markdown }}
+						</div>
+					</div>
 				</div>
-				<div class="section-row-box-text">
-					<p>{{ item.denotes }}</p>
-				</div>
-			</div>
-			{% endfor %}
-		</div>
-		<h3 class="section-subhed">Lesson Colors</h3>
-		{{ lesson_explained|markdown }}
-		<div class="section-row">
-			{% for item in style if item.type == 'lesson-color' %}
-			<div class="section-row-box cerca-brand">
-				<div class="section-row-box-swatch" style="background-color:{{ item.value }};">
-				{{ item.value }}
-				</div>
-				<div class="section-row-box-text">
-					<p>{{ item.denotes }}</p>
+				<div class="col-md-6" id="our-purpose-img">
 				</div>
 			</div>
-			{% endfor %}
-		</div>
-		<h3 class="section-subhed">Full Color Palette</h3>
-		{{ full_color_palette_explained|markdown }}
-		<div class="section-row">
-			<div class="section-row-box one-color">
-				{% for item in style if item.type == 'red' %}
-					<div class="section-row-box-swatch {{ item.type }} {{ item.denotes }}" style="background-color:{{ item.value }};">
-					{{ item.value }}
-					</div>
-				{% endfor %}
+			<div class="row" id="our-promise">
+				<div class="col-md-11 col-md-offset-1">
+					<h2 class="styled-h2 row-title">OUR PROMISE</h2>
+				</div>
+				<div class="col-md-5 col-md-offset-1">
+					<p class="styled-p our-promise-p">IT'S WHAT WE DO THAT NO ONE ELSE DOES.</p>
+					<h1 class="styled-h1">
+						We help people realize the power of their own minds, a collective power that sparks a world of courageous thinking. 
+					</h1>
+				</div>
+				<div class="col-md-5">
+					<p class="styled-p our-promise-p">HOW WE DELIVER ON THAT PROMISE.</p>
+					<h1 class="styled-h1">
+						We help people realize the power of their own minds, a collective power that sparks a world of courageous thinking. 
+					</h1>
+				</div>
 			</div>
-			<div class="section-row-box one-color">
-				{% for item in style if item.type == 'orange' %}
-					<div class="section-row-box-swatch {{ item.type }} {{ item.denotes }}" style="background-color:{{ item.value }};">
-					{{ item.value }}
+			<div class="row" id="yellow-row"></div>
+			<div class="row" id="our-principles">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md col-md-offset-1">
+							<h2 class="styled-h2 row-title" id="our-principles-title">OUR PRINCIPLES</h2>
+						</div>
 					</div>
-				{% endfor %}
+					<div class="row">
+						<div class="col-md-3 col-md-offset-1">
+							<h1 class="styled-h1">How we do everything we do.</h1>
+						</div>					
+						<div class="col-md-8">
+							<div class="row">
+								<div class="principle-container col-sm-5">
+									<div class="principle-title" style="color: #307FE2">Be Rigorous</div>
+									<p class="styled-p principles-p">
+										Our methodology is ambitious. 
+										To thrive, it has to be.
+									</p>
+								</div>
+								<div class="principle-container col-sm-5">
+									<div class="principle-title" style="color: #43B02A">Be Fierce</div>
+									<p class="styled-p principles-p">
+										We are passionately committed to delivering on student outcomes, and uncompromising in our support for our partners.
+									</p>
+								</div>
+							</div>						
+							<div class="row">
+								<div class="principle-container col-sm-5">
+									<div class="principle-title" style="color: #DE2527">
+										Be Inclusive
+									</div>
+									<p class="styled-p principles-p">
+										We stand for equity, and believe access to quality education is right, fair, and imperative.
+									</p>
+								</div>
+								<div class="principle-container col-sm-5">
+									<div class="principle-title" style="color: #FF6900">
+										Be Solutions-Oriented
+									</div>
+									<p class="styled-p principles-p">
+										Education is the road to solving problems. And we demonstrate that argumentative writing is the path to getting there.
+									</p>
+								</div>
+							</div>						
+							<div class="row">
+								<div class="principle-container col-sm-5">
+									<div class="principle-title" style="color: #0A4BB8">
+										Be Supportive
+									</div>
+									<p class="styled-p principles-p">
+										Critical thinking is not always easy. 
+										Being helpful to those learning it, though, is.
+									</p>
+								</div>
+								<div class="principle-container col-sm-5">
+									<div class="principle-title" style="color: #00B7BD">
+										Be Encouraging
+									</div>
+									<p class="styled-p principles-p">
+										Everything we do, say, write, and evoke powers positive results — in students, teachers, administrators, and us.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="section-row-box one-color">
-				{% for item in style if item.type == 'yellow' %}
-					<div class="section-row-box-swatch {{ item.type }} {{ item.denotes }}" style="background-color:{{ item.value }};">
-					{{ item.value }}
+			<div class="row" id="our-mantra">
+				<div class="col-md-6" id="our-mantra-img"></div>
+				<div class="col-md-6" id="our-mantra-text-container">
+					<div class="col-sm-10 col-sm-offset-1">
+						<h2 class="styled-h2 row-title-short">OUR MANTRA</h2>
+						<h1 class="styled-h1 our-mantra-h1">Spark Courageous Thinking</h1>
+						<div class="our-mantra-body">
+							{{ our_mantra_explained|markdown }}
+						</div>
 					</div>
-				{% endfor %}
-			</div>
-			<div class="section-row-box one-color">
-				{% for item in style if item.type == 'light-green' %}
-					<div class="section-row-box-swatch {{ item.type }} {{ item.denotes }}" style="background-color:{{ item.value }};">
-					{{ item.value }}
-					</div>
-				{% endfor %}
-			</div>
-			<div class="section-row-box one-color">
-				{% for item in style if item.type == 'green' %}
-					<div class="section-row-box-swatch {{ item.type }} {{ item.denotes }}" style="background-color:{{ item.value }};">
-					{{ item.value }}
-					</div>
-				{% endfor %}
-			</div>
-			<div class="section-row-box one-color">
-				{% for item in style if item.type == 'teal' %}
-					<div class="section-row-box-swatch {{ item.type }} {{ item.denotes }}" style="background-color:{{ item.value }};">
-					{{ item.value }}
-					</div>
-				{% endfor %}
-			</div>
-			<div class="section-row-box one-color">
-				{% for item in style if item.type == 'blue' %}
-					<div class="section-row-box-swatch {{ item.type }} {{ item.denotes }}" style="background-color:{{ item.value }};">
-					{{ item.value }}
-					</div>
-				{% endfor %}
-			</div>
-			<div class="section-row-box one-color">
-				{% for item in style if item.type == 'dark-blue' %}
-					<div class="section-row-box-swatch {{ item.type }} {{ item.denotes }}" style="background-color:{{ item.value }};">
-					{{ item.value }}
-					</div>
-				{% endfor %}
-			</div>
-			<div class="section-row-box one-color">
-				{% for item in style if item.type == 'purple' %}
-					<div class="section-row-box-swatch {{ item.type }} {{ item.denotes }}" style="background-color:{{ item.value }};">
-					{{ item.value }}
-					</div>
-				{% endfor %}
-			</div>
-			<div class="section-row-box one-color">
-				{% for item in style if item.type == 'pink' %}
-					<div class="section-row-box-swatch {{ item.type }} {{ item.denotes }}" style="background-color:{{ item.value }};">
-					{{ item.value }}
-					</div>
-				{% endfor %}
-			</div>
-			<div class="section-row-box one-color">
-				{% for item in style if item.type == 'gray' %}
-					<div class="section-row-box-swatch {{ item.type }} {{ item.denotes }}" style="background-color:{{ item.value }}; {% if item.denotes == 'button-hover-gray' %}color:#2d3338;{% endif %}">
-					{{ item.value }}
-					</div>
-				{% endfor %}
-			</div>
-			<div class="section-row-box one-color">
-				{% for item in style if item.type == 'skin-tone' %}
-					<div class="section-row-box-swatch {{ item.type }} {{ item.denotes }}" style="background-color:{{ item.value }};">
-					{{ item.value }}
-					</div>
-				{% endfor %}
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="section" id="typography">
-		<h2 class="section-hed">Typography</h2>
-		{{ typography_explained|markdown }}
-		<div class="code-block-multiple-lines">{{ typography_code_roboto }}</div>
-		<br>
-		<span class="code-block-single-line">{{ typography_code }}</span>
-		<div class="section-row">
-		{% for item in style if item.section == 'typography' %}
-			<div class="section-row-full">
-			<h3>{{ item.denotes|process_text }}{% if item.site %}: {{ item.site }}{% endif %}</h3>
-			<{{ item.denotes }} class="{{ item.type }}">{{ item.value }}</{{ item.denotes }}>
-			{% if item.use_case %}
-			<br>
-			<p>{{ item.use_case|process_text }}</p>
-			{% endif %}
-			{% if item.example_code %}
-			<br>
-			<span class="code-block-single-line">{{ item.example_code }}</span>
-			{% endif %}
-			</div>
-		{% endfor %}
-		</div>
-	</div>
-	<div class="section" id="links">
-		<h2 class="section-hed">Links</h2>
-		<div class="section-row">
-		{% for item in style if item.section == 'links' %}
-			<div class="section-row-full">
-			<h3>{{ item.value }}</h3>
-			<p>Curabitur purus tortor, <a href="" target="_blank">pulvinar quis diam vel</a>, ornare facilisis tortor.</p>
-			{% if item.denotes %}
-			<br>
-			<span class="code-block-single-line">{{ item.denotes }}</span>
-			{% endif %}
-			{% if item.example_code %}
-			<br>
-			<br>
-			<p>On hover:</p>
-			<span class="code-block-single-line">{{ item.example_code }}</span>
-			{% endif %}
-			</div>
-		{% endfor %}
-		</div>
-	</div>
-	<div class="section" id="buttons">
-		<h2 class="section-hed">Buttons</h2>
-		{{ buttons_explained|markdown }}
-		<div class="section-row">
-			{% for item in style if item.section == 'buttons' %}
-			<div class="section-row-box {{ item.section }}">
-				<div class="section-row-box-swatch">
-					<button class="section-row-box-button {{ item.value }}">
-						{{ item.type }}
-					</button>
+		<footer class="footer">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-2 col-lg-offset-10 footer-logo">
+						<img src="./img/TC-Logo-Primary-WHITE.svg">
+					</div>
 				</div>
-				{{ item.use_case|markdown }}
-				<div class="code-block-multiple-lines">{{ item.example_code|process_text }}</div>
 			</div>
-			{% endfor %}
-		</div>
+		</footer>
 	</div>
 </div>
 
