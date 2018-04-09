@@ -7,32 +7,71 @@ $roboto-condensed: 'Roboto Condensed', sans-serif;
 $main-text-color: #4A4A4A;
 $white: #FFFFFF;
 $blue: #307FE2;
+$orange: #FF6900;
+$border-grey: #E3E3E3;
 
-.styled-h1 {
+.roboto {
+	font-family: $roboto;
+}
+
+.roboto-slab {
+	font-family: $roboto-slab;
+}
+
+h1 {
 	font-weight: 300;
 	font-family: $roboto-slab;
 	font-size: 40px;
 	line-height: 53px;
 }
 
-.styled-h2 {
+h2 {
 	font-weight: 500;
 	font-family: $roboto;
 	font-size: 20px;
 	line-height: 24px;
 }
 
-%styled-p {
+p, li {
 	font-family: $roboto;
 	font-size: 16px;
 	line-height: 150%;
 }
 
-.styled-p {
-	@extend %styled-p;
+ul, ol {
+	margin-left: 20px;
+}
+
+b {
+	font-weight: 600;
+}
+
+%alt-h1 {
+	font-size: 32px;
+	line-height: 43px;
+}
+
+.alt-h1 {
+	@extend %alt-h1;
+}
+
+.alt-h3 {
+	color: #9B9B9B;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.subheader-h3 {
+	color: #58595B;
+	font-size: 20px;
+	line-height: 24px;
+	margin-bottom: 30px;
 }
 
 .blue-text {
 	color: $blue;
 }
 
+.light {
+	font-weight: 300;
+}

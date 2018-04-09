@@ -1,0 +1,164 @@
+{% extends "_blueprint/_base.html" %}
+{% block css %}
+  <link rel="stylesheet" href="sass/voice.css">
+  <link rel="stylesheet" href="sass/bootstrap_override.css">
+{% endblock css %}
+{% block content %}
+
+<div class="body-container">
+	{% include "_blueprint/_nav.html" %}
+	<div class="main">
+		<div class="container-fluid">
+			<div class="row" id="our-voice">
+				<div class="col-md-11 col-md-offset-1">
+						<h2 class="styled-h2 row-title blue-text">OUR VOICE</h2>
+						<div class="row">
+							<div class="col-md-6">
+								<h1 class="styled-h1 our-voice-h1">How we sound to the world.</h1>
+								{{ our_voice_explained|markdown }}
+							</div>
+						</div>
+				</div>
+			</div>
+			<div class="row" id="our-audiences">
+				<div class="col-md-11 col-md-offset-1">
+						<h2 class="styled-h2 row-title-short">OUR AUDIENCES</h2>
+						<div class="row">
+							<div class="col-md-6">
+								<h1 class="styled-h1 our-audiences-h1">
+									Administrators.
+									<br>
+									Teachers.
+									<br>
+									Students.
+								</h1>
+								{{ our_audiences_explained|markdown }}				
+								<a href="#considerations"><img class="down-arrow" src="./img/down-arrow.svg"></a>
+							</div>
+						</div>
+				</div>
+			</div>
+			<div class="row" id="considerations">
+				<div class="col-md-11 col-md-offset-1">
+					<h1 class="alt-h1">
+						Consider the following when you craft your messages.
+					</h1>
+				</div>
+				<div class="col-md-11 col-md-offset-1">
+					<div class="row considerations-icon-row">
+						{% for item in style if item.section == 'graphics' and item.type == 'considerations' %}
+							<div class="col-sm-4 consideration">
+								<img class="considerations-icon" src="./img/Voice/{{ item.value }}.png">
+								<h1 class="considerations-h1-underline">
+									{{ item.value }}
+								</h1>
+								{{ item.denotes|markdown }}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>			
+			<div class="row" id="content-strategy">
+				<div class="col-md-11 col-md-offset-1">
+					<div class="row">
+						<div class="col-sm-7" id="content-strategy-text">
+							<h2 class="row-title-short blue-text">CONTENT STRATEGY</h2>
+							<h1 class="content-strategy-h1">We use several platforms to communicate with our partners</h1>
+							<div class="row">
+								{% for item in style if item.section == 'icons' and item.type == 'platforms' %}
+									<div class="col-md-4 content-strategy-item">
+										<img class="content-strategy-icon" src="./img/Voice/{{ item.value }}.svg">
+										<h3 class="content-strategy-h3">{{ item.value|upper }}</h3>
+									</div>
+									{% if loop.index % 3 == 0 %}
+										<div class="clearfix"></div>									
+									{% endif %}
+								{% endfor %}
+							</div>
+						</div>
+						<div class="col-sm-5" id="content-strategy-bg">
+							<h1 class="alt-h1 content-strategy-bg-h1">We have a Content Strategy North Star: “Every teacher is a literacy teacher.”</h1>
+							{{ content_strategy_bg_explained|markdown }}
+						</div>
+					</div>
+				</div>
+			</div>			
+			<div class="row" id="maxims">
+				<div class="col-md-11 col-md-offset-1">
+					<div class="row">
+						<h2 class="row-title blue-text">MAXIMS WE BELIEVE</h2>
+						<div class="col-md-6 col-sm-12">
+							<h1 class="maxims-h1">Think like an educator, act like an entrepreneur</h1>
+							{{ maxims_explained|markdown }}
+						</div>
+					</div>
+				</div>
+			</div>			
+			<div class="row" id="follow-thru">
+				<div class="col-md-11 col-md-offset-1">
+					<p class="follow-thru-body">
+						{{ follow_thru_explained }}
+					</p>
+				</div>
+			</div>
+			<div class="row rules-section" id="writing-voice">
+				<div class="col-md-11 col-md-offset-1 rules-body">
+					<h1>Writing Voice</h1>
+					<div class="row">
+						{% for item in style if item.section == 'terminology' and item.type == 'writing-voice' %}
+							<div class="col-md-6 col-sm-6 col-xs-12 rule">
+								<h3 class="rule-title">{{ item.value|upper }}</h3>
+								{{ item.denotes|markdown }}
+							</div>
+							{% if loop.index % 2 == 0 %}
+								<div class="clearfix"></div>									
+							{% endif %}							
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="row rules-section" id="writing-rules">
+				<div class="col-md-11 col-md-offset-1 rules-body">
+					<h1>Writing Rules</h1>
+					<div class="row">
+						{% for item in style if item.section == 'terminology' and item.type == 'writing-rules' %}
+							<div class="col-md-6 col-sm-6 col-xs-12 rule">
+								<h3 class="rule-title">{{ item.value|upper }}</h3>
+								{{ item.denotes|markdown }}
+							</div>
+							{% if loop.index % 2 == 0 %}
+								<div class="clearfix"></div>									
+							{% endif %}							
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="row rules-section" id="spelling">
+				<div class="col-md-11 col-md-offset-1 rules-body">
+					<h1>Writing Rules</h1>
+					<div class="row">
+						{% for item in style if item.section == 'terminology' and item.type == 'spelling' %}
+							<div class="col-md-6 col-sm-6 col-xs-12 rule">
+								<h3 class="rule-title">{{ item.value|upper }}</h3>
+								{{ item.denotes|markdown }}
+							</div>
+							{% if loop.index % 2 == 0 %}
+								<div class="clearfix"></div>									
+							{% endif %}							
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="row" id="clarity">
+				<div class="col-md-4 col-md-offset-1">
+					<h1>Ultimately, clarity of writing comes from thinking clearly.</h1>
+				</div>
+				<div class="col-md-5">
+					{{ clarity_explained|markdown }}
+				</div>
+			</div>
+		</div>
+		{% include "_blueprint/_footer.html" %}
+	</div>
+</div>
+{% endblock content %}

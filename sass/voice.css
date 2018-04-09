@@ -51,6 +51,12 @@ a, a:hover, a:active, a:focus {
   clear: both;
   display: table; }
 
+.roboto {
+  font-family: "Roboto", sans-serif; }
+
+.roboto-slab {
+  font-family: "Roboto Slab", serif; }
+
 h1 {
   font-weight: 300;
   font-family: "Roboto Slab", serif;
@@ -74,8 +80,26 @@ ul, ol {
 b {
   font-weight: 600; }
 
+.alt-h1, .considerations-h1-underline {
+  font-size: 32px;
+  line-height: 43px; }
+
+.alt-h3 {
+  color: #9B9B9B;
+  font-size: 18px;
+  line-height: 24px; }
+
+.subheader-h3 {
+  color: #58595B;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 30px; }
+
 .blue-text {
   color: #307FE2; }
+
+.light {
+  font-weight: 300; }
 
 .main-logo-container {
   margin: 0 5% 36px 5%; }
@@ -142,113 +166,144 @@ b {
 #visual-links > li > a.active {
   border-left: 2px solid #FFB500; }
 
-#brand-guidelines {
-  background-image: url("/img/asset-green-2.png");
+.main {
+  background: #FFFFFF; }
+
+#our-voice {
+  background: url("/img/voice/asset-white-2.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 612px;
-  color: #FFFFFF; }
+  background-position: bottom;
+  padding-top: 97px;
+  padding-bottom: 40px; }
 
-.brand-guidelines-text-container {
-  padding-top: 153px; }
+.our-voice-h1 {
+  margin-top: 22px;
+  margin-bottom: 40px; }
 
-#hello-thinker {
-  height: 612px;
-  padding-top: 83px; }
-
-.hello-thinker-body > p {
-  margin: 1em 0; }
-
-#designer-starter-kit {
-  height: 537px;
-  background: #FFFFFF;
-  position: relative;
-  color: #307FE2; }
-
-.designer-starter-kit-outline {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  border-width: 21px 23px 21px 23px;
-  border-color: #FFB500;
-  border-style: solid;
-  position: absolute; }
-
-.designer-starter-kit-logo-container {
-  margin-top: 48px;
-  margin-bottom: 34px; }
-
-.designer-starter-kit-h2 {
-  margin-bottom: 22px; }
-
-#designer-starter-kit-imgs {
-  height: 537px; }
-
-.designer-starter-kit-imgs-row-1 {
-  background-image: url("/img/home/design-starter-kit-top.png");
+#our-audiences {
+  background: url("/img/voice/asset-blue-4.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 300px; }
+  background-position: top;
+  color: #FFFFFF;
+  padding-top: 40px;
+  padding-bottom: 40px; }
 
-.designer-starter-kit-imgs-row-2 {
-  height: 237px; }
+.our-audiences-h1 {
+  margin-top: 27px;
+  margin-bottom: 27px; }
 
-.designer-starter-kit-imgs-row-2-left {
-  height: 100%;
-  background: #0A4BB8;
-  background-image: url("/img/asset-blue-3.png");
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: center; }
+.down-arrow {
+  margin-top: 50px; }
 
-.designer-starter-kit-imgs-row-2-right {
-  height: 100%;
-  text-align: center;
-  padding-top: 36px;
-  background: #307FE2;
-  overflow-y: hidden;
-  color: #FFFFFF; }
+#considerations {
+  padding-top: 52px; }
 
-#designer-starter-kit-btn {
-  color: #FF6900;
-  font-family: "Roboto Slab", serif;
-  font-size: 16px;
-  border: 3px solid #FF6900;
-  width: 170px;
-  height: 50px;
-  outline: none;
-  margin-top: 33px; }
+.consideration {
+  margin-bottom: 40px; }
 
-#our-purpose {
-  height: 805px; }
+.alt-h1, .considerations-h1-underline {
+  font-size: 32px;
+  line-height: 43px; }
 
-.our-purpose-title {
-  padding-top: 65px; }
+br {
+  display: block;
+  /* makes it have a width */
+  content: "";
+  /* clears default height */
+  margin-top: 24px;
+  /* change this to whatever height you want it */ }
 
-.our-purpose-h1 {
-  margin-top: 49px; }
+.considerations-h1-underline {
+  display: inline-block;
+  padding-bottom: 22px;
+  border-bottom: 2px solid #307FE2;
+  margin-bottom: 32px; }
 
-.our-purpose-body > p {
-  margin-top: 26px;
+.considerations-icon-row {
+  margin-top: 60px;
+  border-bottom: 2px solid #E3E3E3; }
+
+.considerations-icon {
+  margin-bottom: 40px;
+  display: block; }
+
+#content-strategy {
+  border-bottom: 2px solid #E3E3E3;
+  position: relative; }
+
+.content-strategy-h1 {
+  margin-top: 22px; }
+
+.content-strategy-item {
+  margin-top: 58px; }
+
+.content-strategy-icon {
   margin-bottom: 29px; }
 
-#our-purpose-img {
-  background-image: url("/img/home/our-purpose.png");
+.content-strategy-h3 {
+  color: #58595B;
+  font-size: 20px;
+  line-height: 24px; }
+
+#content-strategy-text {
+  padding-top: 57px; }
+
+#content-strategy-bg {
+  background: url("/img/voice/asset-green-1.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  height: 805px; }
-
-#our-promise {
-  background: #307FE2;
+  height: 100%;
   color: #FFFFFF;
-  padding-top: 61px;
-  padding-bottom: 100px; }
+  padding: 30% 5% 5% 5%; }
 
-.our-promise-p {
-  margin-top: 43px;
-  margin-bottom: 20px; }
+.content-strategy-bg-h1 {
+  margin-bottom: 33px; }
+
+#maxims {
+  padding-top: 57px;
+  height: 810px;
+  background: url("/img/voice/asset-white-1.png");
+  background-repeat: no-repeat;
+  background-position: right bottom; }
+
+.maxims-h1 {
+  margin-top: 27px;
+  margin-bottom: 1em; }
+
+#follow-thru {
+  background: #FF6900;
+  padding-top: 33px;
+  padding-bottom: 31px; }
+
+.follow-thru-body {
+  font-family: "Roboto Slab", serif;
+  color: #FFFFFF;
+  font-size: 32px;
+  line-height: 43px;
+  font-weight: 300; }
+
+.rules-section {
+  padding-top: 67px; }
+
+.rules-body {
+  padding-bottom: 60px;
+  border-bottom: 2px solid #E3E3E3; }
+
+.rule {
+  margin-top: 30px; }
+
+.rule-title {
+  color: #307FE2;
+  size: 20px;
+  line-height: 24px; }
+
+#clarity {
+  padding-top: 53px;
+  padding-bottom: 53px;
+  background: #307FE2;
+  color: #FFFFFF; }
 
 .row-title {
   padding-bottom: 15px;
@@ -259,59 +314,6 @@ b {
   padding-bottom: 15px;
   border-bottom: 2px solid; }
 
-#yellow-row {
-  background-image: url("/img/home/asset-yellow-1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 318px; }
-
-#our-principles {
-  padding-top: 57px;
-  padding-bottom: 40px; }
-
-.principle-container {
-  padding: 20px; }
-
-#our-principles-title {
-  margin-bottom: 50px; }
-
-.principle-title {
-  font-family: "Roboto Slab", serif;
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 43px;
-  margin-bottom: 1em; }
-
-#our-mantra {
-  background: #307FE2;
-  color: #FFFFFF; }
-
-#our-mantra-img {
-  height: 926px;
-  background-image: url("/img/home/our-mantra.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-#our-mantra-text-container {
-  padding-top: 49px;
-  height: 100%; }
-
-.our-mantra-h1 {
-  margin-top: 31px; }
-
-.our-mantra-body > p {
-  margin-top: 2em;
-  margin-bottom: 2em; }
-
-@media (min-width: 990px) and (max-width: 1200px) {
-  .our-purpose-title {
-    padding-top: 30px; }
-
-  .our-purpose-h1 {
-    margin-top: 5px;
-    font-size: 30px; } }
 .footer {
   width: 100%;
   height: 86px;
@@ -361,4 +363,4 @@ body {
 .container {
   margin: 0 !important; }
 
-/*# sourceMappingURL=style2.css.map */
+/*# sourceMappingURL=voice.css.map */

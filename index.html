@@ -1,32 +1,12 @@
 {% extends "_blueprint/_base.html" %}
+{% block css %}
+  <link rel="stylesheet" href="sass/style2.css">
+  <link rel="stylesheet" href="sass/bootstrap_override.css">
+{% endblock css %}
 {% block content %}
 
 <div class="body-container">
-	<div class="sidebar">
-		<div class="main-logo-container">
-			<a href="/"><img class="main-logo" src="./img/TC-Logo-Primary.svg"></a>
-			<small class="brand-guidelines-small">Brand Guidelines</small>
-		</div>
-		<div class="search-bar-container">
-			<input type="text" placeholder="Search" name="search-bar" id="search-bar">
-		</div>
-		<div class="nav-container" id="nav">
-			<a href="#brand-links" class="nav-section nav-section-active" data-toggle="collapse">Brand</a>
-			<ul id="brand-links" class="nav-dropdown collapse">
-				<li><a href="#brand-guidelines" class="nav-link">Home</a><i class="icon-chevron-right"></i></li>
-				<li><a href="#our-purpose" class="nav-link">Purpose</a><i class="icon-chevron-right"></i></li>
-				<li><a href="#our-promise" class="nav-link">Promise</a><i class="icon-chevron-right"></i></li>
-				<li><a href="#our-principles" class="nav-link">Principles</a><i class="icon-chevron-right"></i></li>
-				<li><a href="#our-mantra" class="nav-link">Mantra</a><i class="icon-chevron-right"></i></li>
-			</ul>
-			<a href="#voice-links" class="nav-section" data-toggle="collapse">Voice</a>
-			<ul id="voice-links" class="nav-dropdown collapse">
-			</ul>
-			<a href="#visual-links" class="nav-section" data-toggle="collapse">Visuals</a>
-			<ul id="visual-links" class="nav-dropdown collapse">
-			</ul>
-		</div>
-	</div>
+	{% include "_blueprint/_nav.html" %}
 	<div class="main">
 		<div class="container-fluid">
 			<div class="row">
@@ -51,7 +31,7 @@
 					<div class="designer-starter-kit-outline"></div>
 					<div class="col-sm-10 col-sm-offset-1 designer-starter-kit-body">
 						<div class="designer-starter-kit-logo-container">
-							<img src="./img/home/icon-designer-starter-kit-logo.svg">
+							<img src="./img/icon-designer-starter-kit-logo.svg">
 						</div>
 						<h2 class="styled-h2 designer-starter-kit-h2 row-title-short">DESIGNER STARTER KIT</h2>
 						{{ designer_kit_explained|markdown }}
@@ -92,13 +72,13 @@
 					<h2 class="styled-h2 row-title">OUR PROMISE</h2>
 				</div>
 				<div class="col-md-5 col-md-offset-1">
-					<p class="styled-p our-promise-p">IT'S WHAT WE DO THAT NO ONE ELSE DOES.</p>
+					<p class="our-promise-p">IT'S WHAT WE DO THAT NO ONE ELSE DOES.</p>
 					<h1 class="styled-h1">
 						We help people realize the power of their own minds, a collective power that sparks a world of courageous thinking. 
 					</h1>
 				</div>
 				<div class="col-md-5">
-					<p class="styled-p our-promise-p">HOW WE DELIVER ON THAT PROMISE.</p>
+					<p class="our-promise-p">HOW WE DELIVER ON THAT PROMISE.</p>
 					<h1 class="styled-h1">
 						We help people realize the power of their own minds, a collective power that sparks a world of courageous thinking. 
 					</h1>
@@ -120,14 +100,14 @@
 							<div class="row">
 								<div class="principle-container col-sm-5">
 									<div class="principle-title" style="color: #307FE2">Be Rigorous</div>
-									<p class="styled-p principles-p">
+									<p class="principles-p">
 										Our methodology is ambitious. 
 										To thrive, it has to be.
 									</p>
 								</div>
 								<div class="principle-container col-sm-5">
 									<div class="principle-title" style="color: #43B02A">Be Fierce</div>
-									<p class="styled-p principles-p">
+									<p class="principles-p">
 										We are passionately committed to delivering on student outcomes, and uncompromising in our support for our partners.
 									</p>
 								</div>
@@ -137,7 +117,7 @@
 									<div class="principle-title" style="color: #DE2527">
 										Be Inclusive
 									</div>
-									<p class="styled-p principles-p">
+									<p class="principles-p">
 										We stand for equity, and believe access to quality education is right, fair, and imperative.
 									</p>
 								</div>
@@ -145,7 +125,7 @@
 									<div class="principle-title" style="color: #FF6900">
 										Be Solutions-Oriented
 									</div>
-									<p class="styled-p principles-p">
+									<p class="principles-p">
 										Education is the road to solving problems. And we demonstrate that argumentative writing is the path to getting there.
 									</p>
 								</div>
@@ -155,7 +135,7 @@
 									<div class="principle-title" style="color: #0A4BB8">
 										Be Supportive
 									</div>
-									<p class="styled-p principles-p">
+									<p class="principles-p">
 										Critical thinking is not always easy. 
 										Being helpful to those learning it, though, is.
 									</p>
@@ -164,7 +144,7 @@
 									<div class="principle-title" style="color: #00B7BD">
 										Be Encouraging
 									</div>
-									<p class="styled-p principles-p">
+									<p class="principles-p">
 										Everything we do, say, write, and evoke powers positive results — in students, teachers, administrators, and us.
 									</p>
 								</div>
@@ -186,15 +166,7 @@
 				</div>
 			</div>
 		</div>
-		<footer class="footer">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-2 col-lg-offset-10 footer-logo">
-						<img src="./img/TC-Logo-Primary-WHITE.svg">
-					</div>
-				</div>
-			</div>
-		</footer>
+		{% include "_blueprint/_footer.html" %}
 	</div>
 </div>
 

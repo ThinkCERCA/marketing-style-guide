@@ -1,0 +1,342 @@
+p {
+	margin: 24px 0;
+}
+
+p:first-child {
+	margin-top: 0;
+}
+
+h1 {
+	margin-bottom: 30px;
+}
+
+.row-title {
+	padding-bottom: 15px;
+  border-bottom: 2px solid;
+  margin-bottom: 40px;
+}
+
+.row-title-short {
+	display: inline-block;
+	padding-bottom: 15px;
+  border-bottom: 2px solid;
+  margin-bottom: 40px;
+}
+
+#expression {
+	padding: 40px 0;
+}
+
+.expression-h1 {
+	margin-bottom: 40px;
+}
+
+.overview-item {
+	margin-bottom: 40px;
+}
+
+.overview-img {
+	height: 100%;
+}
+
+#designer-starter-kit {
+	border: 20px solid #FFB500;
+	padding: 20px 40px;
+}
+
+.designer-starter-kit-title {
+	padding-top: 15px;
+}
+
+.designer-starter-kit-btn {
+  margin-top: 15px;
+}
+
+.download-btn {
+	border: 3px solid $orange;
+	padding: 10px 20px;
+	color: $orange;
+	font-family: $roboto-slab;
+}
+
+#look-feel-banner {
+	background: $blue;
+	color: $white;
+	font-weight: 300;
+	padding-top: 29px;
+	padding-bottom: 35px;
+}
+
+.down-arrow {
+	margin: 20px;
+}
+
+.logo-panel {
+	width: 100%;
+	padding: 10px;
+}
+
+.logo-panel-sm {
+	width: 150px;
+	padding: 10px;
+}
+
+#logos {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.logo-buttons {
+	margin-top: 40px;
+}
+
+.logo-button {
+	height: 40px;
+	border: 2px solid #767676;
+	font-family: $roboto-slab;
+	padding: 10px 20px;
+	font-weight: 300;
+}
+
+.logo-warning-row {
+	margin-top: 40px;
+	padding: 30px 0;
+}
+
+.logo-warning {
+	display: inline-block;
+	background-image: url('/img/Visuals/warning-logo.png');
+	background-repeat: no-repeat;
+	background-size: auto 100%;	
+	height: 54px;
+	width: 54px;
+}
+
+.logo-warning-text {
+	display: inline-block;
+	font-family: $roboto-slab;
+	font-weight: 300;
+	color: #DE2527;
+	font-size: 32px;
+	line-height: 43px;
+  padding-left: 30px;
+}
+
+#color {
+	margin-bottom: 40px;
+}
+
+.color-box {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 166px;
+	margin-bottom: 30px;
+}
+
+.copy-hex {
+	color: $white;
+	margin: 0 auto;
+	height: 36px;
+	width: 92px;
+	padding: 5px 7px;
+	border: 3px solid $white;
+}
+
+.copy-hex:hover {
+	cursor: pointer;
+}
+
+.typeface-display {
+	font-size: 40px;
+	line-height: 53px;
+	font-weight: 300;
+}
+
+.type-hierarchy-h3 {
+	margin-top: 60px;
+	margin-bottom: 45px;
+}
+
+.type-hierarchy-body {
+	margin-bottom: 60px;
+}
+
+.type-color-examples {
+	margin: 30px auto;
+}
+
+#photography {
+
+}
+
+.stock-img-warning {
+	display: inline-block;
+	font-weight: 700;
+	padding: 10px 20px;
+	border: 3px solid #DE2527;
+	color: #DE2527;
+}
+
+.photography-photo {
+  display: block;
+  margin: 20px auto;
+}
+
+.photography-curly {
+	height: 6px;
+	border-top: 3px solid #C4C4C4;
+	border-left: 3px solid #C4C4C4;
+	border-right: 3px solid #C4C4C4;
+	margin: 0 5%;
+}
+
+#applications-1 {
+	padding-bottom: 35px;
+	border-bottom: 2px solid $border-grey;
+}
+
+.applications-text-1 {
+	position: relative;
+}
+
+.applications-img-1 {
+	height: 695px;
+}
+
+.applications-h1 {
+	margin-top: 35px;
+	margin-bottom: 46px;
+}
+
+.applications-p {
+	margin-top: 10px;
+	color: #767676;
+}
+
+.applications-text-box {
+	position: absolute;
+}
+
+#photo-driven {}
+
+#main-messaging {
+  top: 310px;
+}
+
+#support-messaging {
+  top: 490px;
+}
+
+#applications-2, #applications-3 {
+	padding-top: 29px;
+	padding-bottom: 35px;
+	border-bottom: 2px solid $border-grey;
+}
+
+#pattern-usage {
+	top: 480px;
+}
+
+#photography {
+	margin-bottom: 40px;
+}
+
+#iconography {
+	top: 600px;
+}
+
+#iconography-library {
+	margin-bottom: 40px;
+}
+
+.icon-library-img {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.iconography-download-btn {
+  margin-top: 24px;
+}
+
+#logo {
+  top: 630px;
+}
+
+#bg-ads {
+	padding-top: 50px;
+	padding-bottom: 73px;
+	border-bottom: 2px solid $border-grey;
+}
+
+.bg-ad {
+	height: 353px;
+}
+
+.bg-ad-img {
+	width: 100%;
+}
+
+#ads {
+	margin-left: -30px;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	overflow: hidden; 
+}
+
+.ad {
+	// height: 490px;
+}
+
+.ad-img {
+	height: 100%;
+	padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#contact {
+	background: $orange;
+	color: $white;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.question-mark {
+	vertical-align: middle;
+	margin-right: 30px;
+}
+
+.email {
+	color: $white;
+	text-decoration: underline;
+}
+
+#textures_patterns {
+	margin-bottom: 40px;
+}
+
+@media (min-width: 992px) {
+	.designer-starter-kit-btn {
+  	margin-left: 40px;
+	}
+
+	.stock-img-warning {
+		margin-top: 20%;
+	}
+}
+
+@media (max-width: 992px) {
+	.applications-text-box {
+		position: relative;
+		margin: 0;
+	}
+}
+
+@media (max-width: 1500px) and (min-width: 992px) {
+	.applications-text-box {
+		left: 175px;
+	}
+}

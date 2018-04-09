@@ -1,5 +1,9 @@
 // SIDEBAR
 
+$brand-links: #307FE2;
+$voice-links: #43B02A;
+$visual-links: #FFB500;
+
 .main-logo-container {
 	margin: 0 5% 36px 5%;
 }
@@ -21,8 +25,16 @@
   width: 40%;
 }
 
-.nav-section-active {
-  border-bottom: 2px solid #307FE2;
+#brand-links-section.active {
+  border-bottom: 2px solid $brand-links;
+}
+
+#voice-links-section.active {
+  border-bottom: 2px solid $voice-links;
+}
+
+#visual-links-section.active {
+  border-bottom: 2px solid $visual-links;
 }
 
 .brand-guidelines-small {
@@ -47,6 +59,7 @@
 }
 
 .nav-dropdown {
+	list-style: none;
 	font-size: 18px;
 	line-height: 1.5em;
 	margin-top: 17px;
@@ -58,6 +71,14 @@
   margin-left: 3%;
 }
 
-.nav-link.active {
-	border-left: 2px solid #307FE2;
+#brand-links > li > a.active{
+	border-left: 2px solid $brand-links;
+}
+
+#voice-links > li > a.active {
+	border-left: 2px solid $voice-links;
+}
+
+#visual-links > li > a.active {
+	border-left: 2px solid $visual-links;
 }

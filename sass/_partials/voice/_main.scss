@@ -1,0 +1,182 @@
+.main {
+	background: $white;
+}
+
+#our-voice {
+	background: url('/img/voice/asset-white-2.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+  background-position: bottom;
+	padding-top: 97px;
+	padding-bottom: 40px;
+}
+
+.our-voice-h1 {
+	margin-top: 22px;
+	margin-bottom: 40px;
+}
+
+#our-audiences {
+	background: url('/img/voice/asset-blue-4.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+  background-position: top;
+	color: $white;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.our-audiences-h1 {
+	margin-top: 27px;
+	margin-bottom: 27px;
+}
+
+.down-arrow {
+	margin-top: 50px;
+}
+
+#considerations {
+	padding-top: 52px;
+}
+
+.consideration {
+	margin-bottom: 40px;
+	// text-align: center;
+}
+
+%alt-h1 {
+	font-size: 32px;
+	line-height: 43px;
+}
+
+.alt-h1 {
+	@extend %alt-h1;
+}
+
+br {
+  display: block; /* makes it have a width */
+  content: ""; /* clears default height */
+  margin-top: 24px; /* change this to whatever height you want it */
+}
+
+.considerations-h1-underline {
+	@extend %alt-h1;
+	display: inline-block;
+	padding-bottom: 22px;
+	border-bottom: 2px solid $blue;
+	margin-bottom: 32px;
+}
+
+.considerations-icon-row {
+	margin-top: 60px;
+	border-bottom: 2px solid $border-grey;
+}
+
+.considerations-icon {
+	margin-bottom: 40px;
+	display: block;
+}
+
+#content-strategy {
+	border-bottom: 2px solid $border-grey;
+	position: relative;
+}
+
+.content-strategy-h1 {
+	margin-top: 22px;
+}
+
+.content-strategy-item {
+	margin-top: 58px;
+}
+
+.content-strategy-icon {
+	margin-bottom: 29px;
+}
+
+.content-strategy-h3 {
+	color: #58595B;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+#content-strategy-text {
+	padding-top: 57px;
+}
+
+#content-strategy-bg {
+	background: url('/img/voice/asset-green-1.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	color: $white;
+	padding: 30% 5% 5% 5%;
+}
+
+.content-strategy-bg-h1 {
+	margin-bottom: 33px;
+}
+
+#maxims {
+	padding-top: 57px;
+	height: 810px;
+	background: url('/img/voice/asset-white-1.png');
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+.maxims-h1 {
+	margin-top: 27px;
+	margin-bottom: 1em;
+}
+
+#follow-thru {
+	background: $orange;
+	padding-top: 33px;
+	padding-bottom: 31px;
+}
+
+.follow-thru-body {
+	font-family: $roboto-slab;
+	color: $white;
+	font-size: 32px;
+	line-height: 43px;
+	font-weight: 300;
+}
+
+.rules-section {
+	padding-top: 67px;
+}
+
+.rules-body {
+	padding-bottom: 60px;
+	border-bottom: 2px solid $border-grey;
+}
+
+.rule {
+	margin-top: 30px;
+}
+
+.rule-title {
+	color: $blue;
+	size: 20px;
+	line-height: 24px;
+}
+
+#clarity {
+	padding-top: 53px;
+	padding-bottom: 53px;
+	background: $blue;
+	color: $white;
+}
+
+.row-title {
+	padding-bottom: 15px;
+  border-bottom: 2px solid;
+}
+
+.row-title-short {
+	display: inline-block;
+	padding-bottom: 15px;
+  border-bottom: 2px solid;
+}

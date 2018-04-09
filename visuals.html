@@ -1,0 +1,454 @@
+{% extends "_blueprint/_base.html" %}
+{% block css %}
+  <link rel="stylesheet" href="sass/visuals.css">
+  <link rel="stylesheet" href="sass/bootstrap_override.css">
+{% endblock css %}
+{% block content %}
+
+<div class="body-container">
+	{% include "_blueprint/_nav.html" %}
+	<div class="main">
+		<div class="container-fluid">
+			<div class="row" id="expression">
+				<div class="col-md-11 col-md-offset-1">
+						<h2 class="row-title blue-text">EXPRESSION</h2>
+						<div class="row">
+							<div class="col-md-4">
+								<h1 class="expression-h1">How we look to the world.</h1>
+								{{ expression_explained|markdown }}
+							</div>
+						</div>
+				</div>
+			</div>
+			<div class="row" id="overview">
+				<div class="col-md-11 col-md-offset-1">
+					<h2 class="row-title blue-text">QUICK OVERVIEW</h2>
+					<div class="row">
+						{% for item in style if item.section == 'icons' and item.type == 'overview' %}
+							{% if item.value != 'typography' %}
+							<div class="col-md-6 overview-item">
+								<h3 class="subheader-h3">{{ item.denotes|upper }}</h3>
+								<img class="overview-img" src="./img/Visuals/{{ item.value }}.png">
+							</div>
+							{% else %}
+							<div class="col-md-6 overview-item">
+								<h3 class="subheader-h3 overview-h3">{{ item.denotes|upper }}</h3>
+								<h1 class="roboto-slab">Roboto Slab</h1>
+								<h1 class="roboto">Roboto</h1>
+							</div>
+							{% endif %}
+							{% if loop.index % 2 == 0 %}
+								<div class="clearfix"></div>									
+							{% endif %}
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="row" id="designer-starter-kit">
+				<div class="col-md-2 col-md-offset-1">
+					<img src="./img/icon-designer-starter-kit-logo.svg">
+				</div>				
+				<div class="col-md-3">
+					<h2 class="row-title-short blue-text designer-starter-kit-title">DESIGNER STARTER KIT</h2>
+				</div>				
+				<div class="col-md-3">
+					<p>A zipfile containing logo files, typefaces, an ASE color swatch file and a branded Sketch file</p>
+				</div>				
+				<div class="col-md-2">
+					<button class="download-btn designer-starter-kit-btn">Download</button>
+				</div>
+			</div>
+			<div class="row" id="look-feel-banner">
+				<div class="col-md-7 col-md-offset-1">
+					<h1 class="alt-h1">
+						Following are the legends and rules of ThinkCERCA's look and feel.
+					</h1>
+				</div>
+				<div class="col-md">
+					<a href="#logos"><img class="down-arrow" src="./img/down-arrow.svg"></a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-11 col-md-offset-1" id="logos">
+					<h2 class="row-title blue-text">OUR LOGO</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<img src="./img/Visuals/TCLOGO-cropped.png">
+						</div>
+						<div class="col-md-6">
+							{{ logo_explained|markdown }}
+						</div>
+					</div>
+					<h2 class="row-title-short blue-text">PRIMARY LOGO</h2>
+					<div class="row">
+						<div class="col-md-5">
+							{{ primary_logo_explained|markdown }}
+							<div class="row logo-buttons">
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+									<button class="logo-button">Print</button>
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+									<button class="logo-button">Screen</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-7">
+							<div class="row">
+							{% for item in style if item.section == 'logos' and item.type == 'primary' %}
+								<div class="col-md-6 col-sm-6 col-xs-6">
+									<img class="logo-panel" src="./img/Visuals/{{ item.value }}.png">
+								</div>
+							{% endfor %}
+							{% for item in style if item.section == 'logos' and item.type == 'primary-small' %}
+								<div class="col-md-3 col-sm-3 col-xs-3">
+									<img class="logo-panel-sm" src="./img/Visuals/{{ item.value }}.png">
+								</div>								
+								<div class="col-md-4 col-sm-4 col-xs-4 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+									{{ item.denotes|markdown }}
+								</div>
+								<div class="clearfix"></div>
+							{% endfor %}
+							</div>
+						</div>
+					</div>
+					<h2 class="row-title-short blue-text">SECONDARY LOGO</h2>
+					<div class="row">
+						<div class="col-md-5">
+							{{ secondary_logo_explained|markdown }}
+							<div class="row logo-buttons">
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+									<button class="logo-button">Print</button>
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+									<button class="logo-button">Screen</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-7">
+							{% for item in style if item.section == 'logos' and item.type == 'secondary' %}
+								<div class="col-md-6 col-sm-6 col-xs-6">
+									<img class="logo-panel" src="./img/Visuals/{{ item.value }}.png">
+								</div>
+							{% endfor %}
+							{% for item in style if item.section == 'logos' and item.type == 'secondary-small' %}
+								<div class="col-md-3 col-sm-3 col-xs-3">
+									<img class="logo-panel-sm" src="./img/Visuals/{{ item.value }}.png">
+								</div>								
+								<div class="col-md-4 col-sm-4 col-xs-4 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+									{{ item.denotes|markdown }}
+								</div>
+								<div class="clearfix"></div>
+							{% endfor %}
+						</div>
+					</div>
+					<h2 class="row-title-short blue-text">MONOGRAM</h2>
+					<div class="row">
+						<div class="col-md-5">
+							{{ monogram_explained|markdown }}
+							<div class="row logo-buttons">
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+									<button class="logo-button">Print</button>
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+									<button class="logo-button">Screen</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-7">
+							{% for item in style if item.section == 'logos' and item.type == 'monogram' %}
+								<div class="col-md-6 col-sm-6 col-xs-6">
+									<img class="logo-panel" src="./img/Visuals/{{ item.value }}.png">
+								</div>
+							{% endfor %}
+							{% for item in style if item.section == 'logos' and item.type == 'monogram-small' %}
+								<div class="col-md-3 col-sm-3 col-xs-3">
+									<img class="logo-panel-sm" src="./img/Visuals/{{ item.value }}.png">
+								</div>								
+								<div class="col-md-4 col-sm-4 col-xs-4 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+									{{ item.denotes|markdown }}
+								</div>
+								<div class="clearfix"></div>
+							{% endfor %}
+						</div>
+					</div>
+					<h2 class="row-title-short blue-text">CLEAR SPACE</h2>
+					<div class="row">
+						<div class="col-md-5">
+							{{ clear_space_explained|markdown }}
+						</div>
+						<div class="col-md-4">
+							{% for item in style if item.section == 'logos' and item.type == 'clear-space' %}
+								<img class="logo-panel" src="./img/Visuals/{{ item.value }}.png">
+							{% endfor %}		
+						</div>
+					</div>
+					<div class="row logo-warning-row">
+						<div class="col-md-1 col-sm-1 col-xs-1 col-sm-offset-2 col-xs-offset-2 col-md-offset-2 logo-warning"></div>
+						<div class="col-md-8 col-sm-8 col-xs-8 logo-warning-text">
+							Do not use the logos in any other way than you see in the examples above
+						</div>
+						<div class="col-md-1 col-sm-1 col-xs-1 logo-warning"></div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-11 col-md-offset-1" id="colors">
+					<h2 class="row-title blue-text">COLORS</h2>
+					<h3 class="subheader-h3">PRIMARY COLORS</h3>
+					<div class="row">	
+						{% for item in style if item.section == 'color' and item.type == 'primary' %}
+							<div class="col-md-4">
+								<div class="color-box" style="background: {{ item.value }}">
+									<div class="copy-hex" data-toggle="tooltip" data-placement="bottom" data-clipboard-text="{{ item.value }}">Copy HEX</div>
+								</div>
+								{{ item.denotes|markdown }}
+							</div>
+						{% endfor %}
+					</div>
+					<h3 class="subheader-h3">SECONDARY COLORS</h3>
+					<div class="row">	
+						{% for item in style if item.section == 'color' and item.type == 'secondary' %}
+							<div class="col-md-2">
+								<div class="color-box" style="background: {{ item.value }}">
+									<div class="copy-hex" data-toggle="tooltip" data-placement="bottom"  data-clipboard-text="{{ item.value }}">Copy HEX</div>
+								</div>
+								{{ item.denotes|markdown }}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-11 col-md-offset-1" id="typography">
+					<h2 class="row-title blue-text">TYOPGRAPHY USAGE/FONTS</h2>
+					<div class="row">
+						<div class="col-md-5">	
+							<h1 class="alt-h1">Roboto Slab</h1>	
+							<p class="roboto-slab">
+								The slab is reserved for headlines and callouts only. Use sparingly to show our classic, timelessness, and educational personality.
+							</p>			
+							<p class="roboto-slab">
+								<span class="light">Light</span><br>
+								Regular<br>
+								<b>Bold</b><br>
+								<b style="color: #000000">Black</b>
+							</p>
+						</div>
+						<div class="col-md-7 typeface-display roboto-slab">
+							Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+							<br>
+							1234567890!@#$%^&amp;*()-=_+
+						</div>
+						<div class="clearfix"></div>
+						<div class="col-md-5">					
+							<h1 class="alt-h1">Roboto</h1>		
+							<p class="roboto">
+								Clean san-serif for body copy and informational text. The simple and modern typeface is clean and open for easy reading and accessibility.
+							</p>		
+							<p class="roboto">
+								<br><span class="light">Light</span><br>
+								Regular<br>
+								<b>Bold</b><br>
+								<b style="color: #000000">Black</b>
+							</p>
+						</div>
+						<div class="col-md-7 typeface-display roboto">
+							Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+							<br>
+							1234567890!@#$%^&amp;*()-=_+
+						</div>
+					</div>
+					<h3 class="subheader-h3 type-hierarchy-h3">APPLYING TYPE HIERARCHY</h3>
+					<h1>Headers Roboto Slab 40px / 2.45rem</h1>
+					<h1 class="alt-h1">Headers 2 Roboto Slab 32px / 2rem</h1>
+					<h2 class="subhead blue-text">SUBHEADS 20PX / 1.25REM</h2>
+					<div class="row type-hierarchy-body">
+						<div class="col-md-4">					
+							<p>
+								Roboto Regular is used for Body copy in 16px / 1rem. The recommended size for best readability should not be less than this. 
+							</p>
+							<p><b>Line-height:</b> 24px</p>
+							<p>As a general rule if possible, keep all sizes scaling in sequences of 4s. 4/8/12/16/20/24/28/32/36/40/44.</p>
+						</div>
+					</div>
+					<h3 class="alt-h3">TYPOGRAPHY COLOR EXAMPLES</h3>
+					<img class="type-color-examples center-block" src="/img/Visuals/type-color-examples.png">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-11 col-md-offset-1" id="photography">
+					<h2 class="row-title blue-text">PHOTOGRAPHY STYLE</h2>
+					<div class="row">
+						<div class="col-md-4">
+							{{ photography_style_explained|markdown }}
+						</div>
+						<div class="col-md-3 col-md-offset-1">
+							<ul>
+								{% for item in style if item.section == 'photography' and item.type == 'list' %}
+									<li>{{ item.value }}</li>
+								{% endfor %}
+							</ul>
+						</div>
+						<div class="col-md-4">
+							<div class="stock-img-warning">
+								NEVER USE STOCK IMAGES.
+							</div>
+						</div>
+					</div>
+					<h1 style="text-align: center;">Real and Journalistic</h1>
+					<div class="photography-curly"></div>
+					<div class="row">
+						{% for item in style if item.section == 'photography' and item.type == 'photo' %}
+							<div class="col-md-3">
+								<img class="photography-photo" src="/img/Visuals/{{ item.value }}.png">
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-11 col-md-offset-1" id="iconography-library">
+					<h2 class="row-title blue-text">ICONOGRAPHY LIBRARY</h2>
+					<div class="row">
+						<div class="col-md-5">
+							<p>Our iconography style aligns with the fundamentals of our Brand. It’s characterized by simple and clean lines, a sense of modernity and overall sophistication.</p>
+						</div>
+						<div class="col-md-6 col-md-offset-1">
+							<button class="download-btn iconography-download-btn">Download</button>
+						</div>
+					</div>
+					{% for item in style if item.section == 'icons' and item.type == 'iconography-library' %}
+						<img src="img/Visuals/{{ item.value }}.png" class="icon-library-img">
+					{% endfor %}
+					<h3 class="alt-h3">EXAMPLE USAGE OF ICONS</h3>
+					<img src="/img/Visuals/icon-use-1.png">
+				</div>				
+			</div>
+			<div class="row">
+				<div class="col-md-11 col-md-offset-1" id="textures_patterns">
+					<h2 class="row-title blue-text">TEXTURES/PATTERNS</h2>
+					{{ textures_patterns_explained|markdown }}
+					<div class="row">
+						{% for item in style if item.section == 'graphics' and item.type == 'texture' %}
+							<div class="col-md-4">
+								<img src="./img/Visuals/{{ item.value }}.png">
+								<h1 class="alt-h1">{{ item.value }}</h1>
+								{{ item.denotes|markdown }}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="row" id="applications">
+				<div class="col-md-11 col-md-offset-1">
+					<h2 class="row-title blue-text">APPLICATIONS</h2>
+					<h1 class="alt-h1 applications-h1">Basic Structural Examples</h1>
+					<div class="row" id=applications-1>
+						<div class="col-md-6 col-sm-12 col-xs-12">
+							<img src="/img/Visuals/1-Page-Big-Ad-01.png" class="applications-img-1">
+						</div>
+						<div class="col-md-6 col-sm-12 col-xs-12 applications-text-1">
+							<div class="applications-text-box" id="photo-driven">
+								<h3 class="alt-h3">PHOTO-DRIVEN</h3>
+								<p class="applications-p">
+ 									Images should be used to build a story and create context for the messaging.
+ 								</p>
+							</div>
+							<div class="applications-text-box" id="main-messaging">
+								<h3 class="alt-h3">MAIN MESSAGING</h3>
+								<p class="applications-p">
+									Main messages and headlines are always the most prominent typographic element in our Roboto Slab typeface.
+ 								</p>
+							</div>
+							<div class="applications-text-box" id="support-messaging">
+								<h3 class="alt-h3">SUPPORT MESSAGING</h3>
+								<p class="applications-p">
+									Taglines and supportive information are either in the secondary header size or subhead application and body copy usage.
+								</p>
+							</div>
+							<div class="applications-text-box" id="logo">
+								<h3 class="alt-h3">LOGO</h3>
+								<p class="applications-p">
+									ThinkCERCA logo should always be present.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="row" id=applications-2>
+						<div class="col-md-6 col-sm-12 col-xs-12">
+							<img src="/img/Visuals/1-Page-Cover-01.png" class="applications-img-2">
+						</div>
+						<div class="col-md-6 col-sm-12 col-xs-12 applications-text-2">
+							<div class="applications-text-box" id="texture-usage">
+								<h3 class="alt-h3">TEXTURE USAGE</h3>
+								<p class="applications-p">
+									Use the <b>Spark</b> texture to help convey lightness and optimism in classrooms.
+ 								</p>
+							</div>
+							<div class="applications-text-box" id="pattern-usage">
+								<h3 class="alt-h3">PATTERN USAGE</h3>
+								<p class="applications-p">
+									Applying subtle pattern work that does not overshadow main messaging is encouraged.
+ 								</p>
+							</div>
+							<div class="applications-text-box" id="iconography">
+								<h3 class="alt-h3">ICONOGRAPHY</h3>
+								<p class="applications-p">
+									Iconography should always be used as supportive graphics for all messaging.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="row" id=applications-3>
+						<div class="col-md-6 col-sm-12 col-xs-12">
+							<img src="/img/Visuals/icon-use-1.png" class="applications-img-3">
+						</div>
+						<div class="col-md-6 col-sm-12 col-xs-12 applications-text-3">
+							<div class="applications-text-box" id="horizontal-application">
+								<h3 class="alt-h3">HORIZONTAL APPLICATION</h3>
+								<p class="applications-p">
+									Using the same graphic guidelines when creating horizontal oriented materials.
+ 								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-11 col-md-offset-1">
+					<div class="row" id="bg-ads">
+						{% for item in style if item.section == 'graphics' and item.type == 'bg-ads' %}
+						<div class="col-md-4 col-sm-6 col-xs">
+							<img class="bg-ad-img" src="./img/Visuals/{{ item.value }}.png">
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="row" id="ads">
+				<div class="col-md-11 col-md-offset-1">
+					<div class="row"> 
+						{% for item in style if item.section == 'graphics' and item.type == 'ads' %}										
+								<div class="col-md-6 col-sm-12 ad">
+									<img class="ad-img" src="./img/Visuals/{{ item.value }}.png">
+								</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="row" id="contact">
+				<div class="col-md-1 col-sm-1 col-xs-1 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+					<img class="question-mark" src="./img/Visuals/Question-Mark.svg">
+				</div>
+				<div class="col-md-10 col-sm-10 col-xs-10">
+					<p>
+						If you have any questions regarding the visuals,
+						please contact Tousue Vang at <a href="mailto:tousue@thinkcerca.com" class="">tousue@thinkcerca.com</a>
+					</p>
+				</div>
+			</div>
+		</div>
+				{% include "_blueprint/_footer.html" %}
+	</div>
+</div>
+{% endblock content %}

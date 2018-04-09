@@ -1,7 +1,7 @@
 @import '_partials/reset';
 @import '_partials/typeface';
 @import '_partials/sidebar';
-@import '_partials/home/main';
+@import '_partials/visuals/main';
 @import '_partials/footer';
 
 html {
@@ -40,6 +40,7 @@ body {
 	height: 100vh;
 	background: #FFFFFF;
 	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .container { 
