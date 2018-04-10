@@ -36,7 +36,7 @@ h1 {
 }
 
 .overview-img {
-	height: 100%;
+	width: 80%;
 }
 
 #designer-starter-kit {
@@ -53,10 +53,22 @@ h1 {
 }
 
 .download-btn {
-	border: 3px solid $orange;
-	padding: 10px 20px;
-	color: $orange;
-	font-family: $roboto-slab;
+  -webkit-font-smoothing: antialiased;
+    font-family: "Roboto Slab", "Helvetica", "Arial", sans-serif;
+    background: #307fe2;
+    border: 1px solid #307fe2;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    line-height: 1;
+    padding: 10px;
+}
+
+.download-btn:hover {
+  background: #0a4bb8;
+  border-color: #0a4bb8;
 }
 
 #look-feel-banner {
@@ -91,12 +103,26 @@ h1 {
 }
 
 .logo-button {
-	height: 40px;
-	border: 2px solid #767676;
-	font-family: $roboto-slab;
-	padding: 10px 20px;
-	font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Roboto Slab", "Helvetica", "Arial", sans-serif;
+  background: #fff;
+  border-color: #307fe2;
+  border: 1px solid #307fe2;
+  border-radius: 4px;
+  color: #307fe2;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  padding: 10px;
 }
+
+.logo-button:hover {
+  background: #fff;
+  border-color: #0a4bb8;
+  color: #0a4bb8;
+}
+
+button:focus {outline:0;}
 
 .logo-warning-row {
 	margin-top: 40px;

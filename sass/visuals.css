@@ -196,7 +196,7 @@ h1 {
   margin-bottom: 40px; }
 
 .overview-img {
-  height: 100%; }
+  width: 80%; }
 
 #designer-starter-kit {
   border: 20px solid #FFB500;
@@ -209,10 +209,23 @@ h1 {
   margin-top: 15px; }
 
 .download-btn {
-  border: 3px solid #FF6900;
-  padding: 10px 20px;
-  color: #FF6900;
-  font-family: "Roboto Slab", serif; }
+  -webkit-font-smoothing: antialiased;
+    font-family: "Roboto Slab", "Helvetica", "Arial", sans-serif;
+    background: #307fe2;
+    border: 1px solid #307fe2;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    line-height: 1;
+    padding: 10px;
+}
+
+.download-btn:hover {
+  background: #0a4bb8;
+  border-color: #0a4bb8;
+}
 
 #look-feel-banner {
   background: #307FE2;
@@ -240,11 +253,26 @@ h1 {
   margin-top: 40px; }
 
 .logo-button {
-  height: 40px;
-  border: 2px solid #767676;
-  font-family: "Roboto Slab", serif;
-  padding: 10px 20px;
-  font-weight: 300; }
+  -webkit-font-smoothing: antialiased;
+  font-family: "Roboto Slab", "Helvetica", "Arial", sans-serif;
+  background: #fff;
+  border-color: #307fe2;
+  border: 1px solid #307fe2;
+  border-radius: 4px;
+  color: #307fe2;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  padding: 10px;
+}
+
+.logo-button:hover {
+  background: #fff;
+  border-color: #0a4bb8;
+  color: #0a4bb8;
+}
+
+button:focus {outline:0;}
 
 .logo-warning-row {
   margin-top: 40px;
