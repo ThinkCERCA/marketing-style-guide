@@ -190,6 +190,7 @@ button:focus {outline:0;}
 
 .type-color-examples {
 	margin: 30px auto;
+	width: 100%;
 }
 
 #photography {
@@ -206,7 +207,9 @@ button:focus {outline:0;}
 
 .photography-photo {
   display: block;
-  margin: 20px auto;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .photography-curly {
@@ -214,7 +217,7 @@ button:focus {outline:0;}
 	border-top: 3px solid #C4C4C4;
 	border-left: 3px solid #C4C4C4;
 	border-right: 3px solid #C4C4C4;
-	margin: 0 5%;
+	margin: 0 10px 20px;
 }
 
 #applications-1 {
@@ -304,7 +307,7 @@ button:focus {outline:0;}
 }
 
 #ads {
-	margin-left: -30px;
+	margin-left: 0;
 	margin-bottom: 40px;
 	margin-top: 40px;
 	overflow: hidden; 
@@ -315,8 +318,8 @@ button:focus {outline:0;}
 }
 
 .ad-img {
-	height: 100%;
-	padding: 10px;
+	width: 100%;
+	padding: 0;
   display: block;
   margin-left: auto;
   margin-right: auto;

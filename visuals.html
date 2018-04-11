@@ -299,7 +299,7 @@
 					<div class="photography-curly"></div>
 					<div class="row">
 						{% for item in style if item.section == 'photography' and item.type == 'photo' %}
-							<div class="col-md-3">
+							<div class="col-md-3" style="padding:0;">
 								<img class="photography-photo" src="/img/Visuals/{{ item.value }}.png">
 							</div>
 						{% endfor %}
@@ -330,10 +330,10 @@
 					{{ textures_patterns_explained|markdown }}
 					<div class="row">
 						{% for item in style if item.section == 'graphics' and item.type == 'texture' %}
-							<div class="col-md-4">
-								<img src="./img/Visuals/{{ item.value }}.png">
+							<div class="col-md-4" style="padding: 0">
+								<img src="./img/Visuals/{{ item.value }}.png" style="width: 100%;">
 								<h1 class="alt-h1">{{ item.value }}</h1>
-								{{ item.denotes|markdown }}
+								<div style="padding-right: 30px;">{{ item.denotes|markdown }}</div>
 							</div>
 						{% endfor %}
 					</div>
@@ -429,7 +429,7 @@
 				<div class="col-md-11 col-md-offset-1">
 					<div class="row"> 
 						{% for item in style if item.section == 'graphics' and item.type == 'ads' %}										
-								<div class="col-md-6 col-sm-12 ad">
+								<div class="col-md-6 col-sm-12 ad" style="padding: 0;">
 									<img class="ad-img" src="./img/Visuals/{{ item.value }}.png">
 								</div>
 						{% endfor %}
@@ -440,10 +440,10 @@
 				<div class="col-md-1 col-sm-1 col-xs-1 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
 					<img class="question-mark" src="./img/Visuals/Question-Mark.svg">
 				</div>
-				<div class="col-md-10 col-sm-10 col-xs-10">
+				<div class="col-md-6 col-sm-6 col-xs-10">
 					<p>
 						If you have any questions regarding the visuals,
-						please contact Tousue Vang at <a href="mailto:tousue@thinkcerca.com" class="">tousue@thinkcerca.com</a>
+						please contact Tousue Vang at <a href="mailto:tousue@thinkcerca.com" style="color: #fff; text-decoration: underline; font-weight: 400;">tousue@thinkcerca.com</a>
 					</p>
 				</div>
 			</div>
