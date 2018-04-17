@@ -74,6 +74,25 @@ ul, ol {
 b {
   font-weight: 600; }
 
+.download-btn {
+  -webkit-font-smoothing: antialiased;
+    font-family: "Roboto Slab", "Helvetica", "Arial", sans-serif;
+    background: #307fe2;
+    border: 1px solid #307fe2;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    line-height: 1;
+    padding: 10px;
+}
+
+.download-btn:hover {
+  background: #0a4bb8;
+  border-color: #0a4bb8;
+}
+
 .blue-text {
   color: #307FE2; }
 

@@ -48,7 +48,7 @@
 					<div class="row considerations-icon-row">
 						{% for item in style if item.section == 'graphics' and item.type == 'considerations' %}
 							<div class="col-sm-4 consideration">
-								<img class="considerations-icon" src="./img/Voice/{{ item.value }}.png">
+								<img class="considerations-icon" src="./img/Voice/{{ item.value }}.png" style="margin-bottom: {{ item.example_code  }}px;">
 								<h1 class="considerations-h1-underline">
 									{{ item.value }}
 								</h1>
@@ -63,7 +63,7 @@
 					<div class="row">
 						<div class="col-sm-7" id="content-strategy-text">
 							<h2 class="row-title-short blue-text">CONTENT STRATEGY</h2>
-							<h1 class="content-strategy-h1">We use several platforms to communicate with our partners</h1>
+							<h1 class="content-strategy-h1">We use several platforms to communicate with our partners.</h1>
 							<div class="row">
 								{% for item in style if item.section == 'icons' and item.type == 'platforms' %}
 									<div class="col-md-4 content-strategy-item">
@@ -77,7 +77,7 @@
 							</div>
 						</div>
 						<div class="col-sm-5" id="content-strategy-bg">
-							<h1 class="alt-h1 content-strategy-bg-h1">We have a Content Strategy North Star: “Every teacher is a literacy teacher.”</h1>
+							<h1 class="alt-h1 content-strategy-bg-h1">Everything we produce should be immediately useful and compelling.</h1>
 							{{ content_strategy_bg_explained|markdown }}
 						</div>
 					</div>
@@ -86,9 +86,9 @@
 			<div class="row" id="maxims">
 				<div class="col-md-11 col-md-offset-1">
 					<div class="row">
-						<h2 class="row-title blue-text">MAXIMS WE BELIEVE</h2>
+						<h2 class="row-title blue-text">CONTENT THEMES</h2>
 						<div class="col-md-6 col-sm-12">
-							<h1 class="maxims-h1">Think like an educator, act like an entrepreneur</h1>
+							<h1 class="maxims-h1">These are our guiding North Stars.</h1>
 							{{ maxims_explained|markdown }}
 						</div>
 					</div>
@@ -120,6 +120,7 @@
 			<div class="row rules-section" id="writing-rules">
 				<div class="col-md-11 col-md-offset-1 rules-body">
 					<h1>Writing Rules</h1>
+					<h2>When in doubt, refer to <span style="font-style: italic;">The Chicago Manual of Style</span>.</h2>
 					<div class="row">
 						{% for item in style if item.section == 'terminology' and item.type == 'writing-rules' %}
 							<div class="col-md-6 col-sm-6 col-xs-12 rule">
@@ -135,7 +136,7 @@
 			</div>
 			<div class="row rules-section" id="spelling">
 				<div class="col-md-11 col-md-offset-1 rules-body">
-					<h1>Writing Rules</h1>
+					<h1>Spelling Rules</h1>
 					<div class="row">
 						{% for item in style if item.section == 'terminology' and item.type == 'spelling' %}
 							<div class="col-md-6 col-sm-6 col-xs-12 rule">
@@ -154,7 +155,6 @@
 					<h1>Ultimately, clarity of writing comes from thinking clearly.</h1>
 				</div>
 				<div class="col-md-5">
-					{{ clarity_explained|markdown }}
 				</div>
 			</div>
 		</div>

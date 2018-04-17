@@ -262,8 +262,7 @@ br {
   margin-bottom: 33px; }
 
 #maxims {
-  padding-top: 57px;
-  height: 810px;
+  padding: 57px 0 50px 0;
   background: url("/img/voice/asset-white-1.png");
   background-repeat: no-repeat;
   background-position: right bottom; }

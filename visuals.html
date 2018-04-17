@@ -52,16 +52,16 @@
 					<h2 class="row-title-short blue-text designer-starter-kit-title">DESIGNER STARTER KIT</h2>
 				</div>				
 				<div class="col-md-3">
-					<p>A zipfile containing logo files, typefaces, an ASE color swatch file and a branded Sketch file</p>
+					<p>A .zip file containing logo files, typefaces, an ASE color swatch file, and a branded Sketch file</p>
 				</div>				
 				<div class="col-md-2">
-					<button class="download-btn designer-starter-kit-btn">Download</button>
+					<button class="download-btn designer-starter-kit-btn"><a href="img/ThinkCERCA_designer-starter-kit.zip" download="ThinkCERCA_designer-starter-kit.zip" style="color: #ffffff;"> Download</a></button>
 				</div>
 			</div>
 			<div class="row" id="look-feel-banner">
 				<div class="col-md-7 col-md-offset-1">
 					<h1 class="alt-h1">
-						Following are the legends and rules of ThinkCERCA's look and feel.
+						These are the legends and rules of ThinkCERCA's look and feel.
 					</h1>
 				</div>
 				<div class="col-md">
@@ -85,10 +85,10 @@
 							{{ primary_logo_explained|markdown }}
 							<div class="row logo-buttons">
 								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-									<button class="logo-button">Print</button>
+									<button class="logo-button"><a href="img/primary.zip" download="primary-logo.zip" style="color: #307fe2;">Print</a></button>
 								</div>
 								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-									<button class="logo-button">Screen</button>
+									<button class="logo-button"><a href="img/primary.zip" download="primary-logo.zip" style="color: #307fe2;">Screen</a></button>
 								</div>
 							</div>
 						</div>
@@ -103,7 +103,7 @@
 								<div class="col-md-3 col-sm-3 col-xs-3">
 									<img class="logo-panel-sm" src="./img/Visuals/{{ item.value }}.png">
 								</div>								
-								<div class="col-md-4 col-sm-4 col-xs-4 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+								<div class="col-md-4 col-sm-4 col-xs-4" style="padding: 20px;">
 									{{ item.denotes|markdown }}
 								</div>
 								<div class="clearfix"></div>
@@ -117,10 +117,10 @@
 							{{ secondary_logo_explained|markdown }}
 							<div class="row logo-buttons">
 								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-									<button class="logo-button">Print</button>
+									<button class="logo-button"><a href="img/secondary.zip" download="secondary-logo.zip" style="color: #307fe2;">Print</a></button>
 								</div>
 								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-									<button class="logo-button">Screen</button>
+									<button class="logo-button"><a href="img/secondary.zip" download="secondary-logo.zip" style="color: #307fe2;">Screen</a></button>
 								</div>
 							</div>
 						</div>
@@ -134,7 +134,7 @@
 								<div class="col-md-3 col-sm-3 col-xs-3">
 									<img class="logo-panel-sm" src="./img/Visuals/{{ item.value }}.png">
 								</div>								
-								<div class="col-md-4 col-sm-4 col-xs-4 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+								<div class="col-md-4 col-sm-4 col-xs-4" style="padding: 20px;">
 									{{ item.denotes|markdown }}
 								</div>
 								<div class="clearfix"></div>
@@ -147,10 +147,10 @@
 							{{ monogram_explained|markdown }}
 							<div class="row logo-buttons">
 								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-									<button class="logo-button">Print</button>
+									<button class="logo-button"><a href="img/monogram.zip" download="monogram-logo.zip" style="color: #307fe2;">Print</a></button>
 								</div>
 								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-									<button class="logo-button">Screen</button>
+									<button class="logo-button"><a href="img/monogram.zip" download="monogram-logo.zip" style="color: #307fe2;">Screen</a></button>
 								</div>
 							</div>
 						</div>
@@ -164,7 +164,7 @@
 								<div class="col-md-3 col-sm-3 col-xs-3">
 									<img class="logo-panel-sm" src="./img/Visuals/{{ item.value }}.png">
 								</div>								
-								<div class="col-md-4 col-sm-4 col-xs-4 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+								<div class="col-md-4 col-sm-4 col-xs-4" style="padding: 20px;">
 									{{ item.denotes|markdown }}
 								</div>
 								<div class="clearfix"></div>
@@ -243,7 +243,7 @@
 						<div class="col-md-5">					
 							<h1 class="alt-h1">Roboto</h1>		
 							<p class="roboto">
-								Clean san-serif for body copy and informational text. The simple and modern typeface is clean and open for easy reading and accessibility.
+								Clean sans serif for body copy and informational text. The simple and modern typeface is clean and open for easy reading and accessibility.
 							</p>		
 							<p class="roboto">
 								<br><span class="light">Light</span><br>
@@ -314,7 +314,7 @@
 							<p>Our iconography style aligns with the fundamentals of our Brand. It’s characterized by simple and clean lines, a sense of modernity and overall sophistication.</p>
 						</div>
 						<div class="col-md-6 col-md-offset-1">
-							<button class="download-btn iconography-download-btn">Download</button>
+							<button class="download-btn iconography-download-btn"><a href="https://www.dropbox.com/sh/4gjqjehxe2bw84c/AADy9dP_v8B4s2HtiYcY54Uqa?dl=0" style="color: #ffffff;" target="_blank">Download</a></button>
 						</div>
 					</div>
 					{% for item in style if item.section == 'icons' and item.type == 'iconography-library' %}
