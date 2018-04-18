@@ -28,7 +28,7 @@
 							{% if item.value != 'typography' %}
 							<div class="col-md-6 overview-item">
 								<h3 class="subheader-h3">{{ item.denotes|upper }}</h3>
-								<img class="overview-img" src="./img/Visuals/{{ item.value }}.png">
+								<img class="overview-img" src="img/Visuals/{{ item.value }}.png">
 							</div>
 							{% else %}
 							<div class="col-md-6 overview-item">
@@ -46,7 +46,7 @@
 			</div>
 			<div class="row" id="designer-starter-kit">
 				<div class="col-md-2 col-md-offset-1">
-					<img src="./img/icon-designer-starter-kit-logo.svg">
+					<img src="img/icon-designer-starter-kit-logo.svg">
 				</div>				
 				<div class="col-md-3">
 					<h2 class="row-title-short blue-text designer-starter-kit-title">DESIGNER STARTER KIT</h2>
@@ -65,15 +65,15 @@
 					</h1>
 				</div>
 				<div class="col-md">
-					<a href="#logos"><img class="down-arrow" src="./img/down-arrow.svg"></a>
+					<a href="#logo"><img class="down-arrow" src="img/down-arrow.svg"></a>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-11 col-md-offset-1" id="logos">
+				<div class="col-md-11 col-md-offset-1" id="logo">
 					<h2 class="row-title blue-text">OUR LOGO</h2>
 					<div class="row">
 						<div class="col-md-6">
-							<img src="./img/Visuals/TCLOGO-cropped.png">
+							<img src="img/Visuals/TCLOGO-cropped.png">
 						</div>
 						<div class="col-md-6">
 							{{ logo_explained|markdown }}
@@ -96,12 +96,12 @@
 							<div class="row">
 							{% for item in style if item.section == 'logos' and item.type == 'primary' %}
 								<div class="col-md-6 col-sm-6 col-xs-6">
-									<img class="logo-panel" src="./img/Visuals/{{ item.value }}.png">
+									<img class="logo-panel" src="img/Visuals/{{ item.value }}.png">
 								</div>
 							{% endfor %}
 							{% for item in style if item.section == 'logos' and item.type == 'primary-small' %}
 								<div class="col-md-3 col-sm-3 col-xs-3">
-									<img class="logo-panel-sm" src="./img/Visuals/{{ item.value }}.png">
+									<img class="logo-panel-sm" src="img/Visuals/{{ item.value }}.png">
 								</div>								
 								<div class="col-md-4 col-sm-4 col-xs-4" style="padding: 20px;">
 									{{ item.denotes|markdown }}
@@ -127,12 +127,12 @@
 						<div class="col-md-7">
 							{% for item in style if item.section == 'logos' and item.type == 'secondary' %}
 								<div class="col-md-6 col-sm-6 col-xs-6">
-									<img class="logo-panel" src="./img/Visuals/{{ item.value }}.png">
+									<img class="logo-panel" src="img/Visuals/{{ item.value }}.png">
 								</div>
 							{% endfor %}
 							{% for item in style if item.section == 'logos' and item.type == 'secondary-small' %}
 								<div class="col-md-3 col-sm-3 col-xs-3">
-									<img class="logo-panel-sm" src="./img/Visuals/{{ item.value }}.png">
+									<img class="logo-panel-sm" src="img/Visuals/{{ item.value }}.png">
 								</div>								
 								<div class="col-md-4 col-sm-4 col-xs-4" style="padding: 20px;">
 									{{ item.denotes|markdown }}
@@ -157,12 +157,12 @@
 						<div class="col-md-7">
 							{% for item in style if item.section == 'logos' and item.type == 'monogram' %}
 								<div class="col-md-6 col-sm-6 col-xs-6">
-									<img class="logo-panel" src="./img/Visuals/{{ item.value }}.png">
+									<img class="logo-panel" src="img/Visuals/{{ item.value }}.png">
 								</div>
 							{% endfor %}
 							{% for item in style if item.section == 'logos' and item.type == 'monogram-small' %}
 								<div class="col-md-3 col-sm-3 col-xs-3">
-									<img class="logo-panel-sm" src="./img/Visuals/{{ item.value }}.png">
+									<img class="logo-panel-sm" src="img/Visuals/{{ item.value }}.png">
 								</div>								
 								<div class="col-md-4 col-sm-4 col-xs-4" style="padding: 20px;">
 									{{ item.denotes|markdown }}
@@ -178,7 +178,7 @@
 						</div>
 						<div class="col-md-4">
 							{% for item in style if item.section == 'logos' and item.type == 'clear-space' %}
-								<img class="logo-panel" src="./img/Visuals/{{ item.value }}.png">
+								<img class="logo-panel" src="img/Visuals/{{ item.value }}.png">
 							{% endfor %}		
 						</div>
 					</div>
@@ -272,7 +272,7 @@
 						</div>
 					</div>
 					<h3 class="alt-h3">TYPOGRAPHY COLOR EXAMPLES</h3>
-					<img class="type-color-examples center-block" src="/img/Visuals/type-color-examples.png">
+					<img class="type-color-examples center-block" src="img/Visuals/type-color-examples.png">
 				</div>
 			</div>
 			<div class="row">
@@ -300,14 +300,14 @@
 					<div class="row">
 						{% for item in style if item.section == 'photography' and item.type == 'photo' %}
 							<div class="col-md-3" style="padding:0;">
-								<img class="photography-photo" src="/img/Visuals/{{ item.value }}.png">
+								<img class="photography-photo" src="img/Visuals/{{ item.value }}.png">
 							</div>
 						{% endfor %}
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-11 col-md-offset-1" id="iconography-library">
+				<div class="col-md-11 col-md-offset-1" id="iconography">
 					<h2 class="row-title blue-text">ICONOGRAPHY LIBRARY</h2>
 					<div class="row">
 						<div class="col-md-5">
@@ -321,17 +321,17 @@
 						<img src="img/Visuals/{{ item.value }}.png" class="icon-library-img">
 					{% endfor %}
 					<h3 class="alt-h3">EXAMPLE USAGE OF ICONS</h3>
-					<img src="/img/Visuals/icon-use-1.png">
+					<img src="img/Visuals/icon-use-1.png">
 				</div>				
 			</div>
 			<div class="row">
-				<div class="col-md-11 col-md-offset-1" id="textures_patterns">
+				<div class="col-md-11 col-md-offset-1" id="textures-patterns">
 					<h2 class="row-title blue-text">TEXTURES/PATTERNS</h2>
 					{{ textures_patterns_explained|markdown }}
 					<div class="row">
 						{% for item in style if item.section == 'graphics' and item.type == 'texture' %}
 							<div class="col-md-4" style="padding: 0">
-								<img src="./img/Visuals/{{ item.value }}.png" style="width: 100%;">
+								<img src="img/Visuals/{{ item.value }}.png" style="width: 100%;">
 								<h1 class="alt-h1">{{ item.value }}</h1>
 								<div style="padding-right: 30px;">{{ item.denotes|markdown }}</div>
 							</div>
@@ -344,9 +344,10 @@
 					<h2 class="row-title blue-text">APPLICATIONS</h2>
 					<h1 class="alt-h1 applications-h1">Basic Structural Examples</h1>
 					<div class="row" id=applications-1>
-						<div class="col-md-6 col-sm-12 col-xs-12">
-							<img src="/img/Visuals/1-Page-Big-Ad-01.png" class="applications-img-1">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<img src="img/guide-1.png" class="applications-img-1">
 						</div>
+						{#
 						<div class="col-md-6 col-sm-12 col-xs-12 applications-text-1">
 							<div class="applications-text-box" id="photo-driven">
 								<h3 class="alt-h3">PHOTO-DRIVEN</h3>
@@ -373,11 +374,13 @@
 								</p>
 							</div>
 						</div>
+						#}
 					</div>
 					<div class="row" id=applications-2>
-						<div class="col-md-6 col-sm-12 col-xs-12">
-							<img src="/img/Visuals/1-Page-Cover-01.png" class="applications-img-2">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<img src="img/guide-2.png" class="applications-img-1">
 						</div>
+						{#
 						<div class="col-md-6 col-sm-12 col-xs-12 applications-text-2">
 							<div class="applications-text-box" id="texture-usage">
 								<h3 class="alt-h3">TEXTURE USAGE</h3>
@@ -398,10 +401,11 @@
 								</p>
 							</div>
 						</div>
+						#}
 					</div>
 					<div class="row" id=applications-3>
 						<div class="col-md-6 col-sm-12 col-xs-12">
-							<img src="/img/Visuals/icon-use-1.png" class="applications-img-3">
+							<img src="img/Visuals/icon-use-1.png" class="applications-img-3">
 						</div>
 						<div class="col-md-6 col-sm-12 col-xs-12 applications-text-3">
 							<div class="applications-text-box" id="horizontal-application">
@@ -419,7 +423,7 @@
 					<div class="row" id="bg-ads">
 						{% for item in style if item.section == 'graphics' and item.type == 'bg-ads' %}
 						<div class="col-md-4 col-sm-6 col-xs">
-							<img class="bg-ad-img" src="./img/Visuals/{{ item.value }}.png">
+							<img class="bg-ad-img" src="img/Visuals/{{ item.value }}.png">
 						</div>
 						{% endfor %}
 					</div>
@@ -430,7 +434,7 @@
 					<div class="row"> 
 						{% for item in style if item.section == 'graphics' and item.type == 'ads' %}										
 								<div class="col-md-6 col-sm-12 ad" style="padding: 0;">
-									<img class="ad-img" src="./img/Visuals/{{ item.value }}.png">
+									<img class="ad-img" src="img/Visuals/{{ item.value }}.png">
 								</div>
 						{% endfor %}
 					</div>
@@ -438,7 +442,7 @@
 			</div>
 			<div class="row" id="contact">
 				<div class="col-md-1 col-sm-1 col-xs-1 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
-					<img class="question-mark" src="./img/Visuals/Question-Mark.svg">
+					<img class="question-mark" src="img/Visuals/Question-Mark.svg">
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-10">
 					<p>

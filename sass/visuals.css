@@ -245,7 +245,7 @@ h1 {
   width: 150px;
   padding: 10px; }
 
-#logos {
+#logo {
   padding-top: 40px;
   padding-bottom: 40px; }
 
@@ -280,7 +280,7 @@ button:focus {outline:0;}
 
 .logo-warning {
   display: inline-block;
-  background-image: url("/img/Visuals/warning-logo.png");
+  background-image: url("../img/Visuals/warning-logo.png");
   background-repeat: no-repeat;
   background-size: auto 100%;
   height: 54px;
@@ -374,10 +374,10 @@ button:focus {outline:0;}
   position: absolute; }
 
 #main-messaging {
-  top: 310px; }
+ }
 
 #support-messaging {
-  top: 490px; }
+}
 
 #applications-2, #applications-3 {
   padding-top: 29px;
@@ -385,26 +385,26 @@ button:focus {outline:0;}
   border-bottom: 2px solid #E3E3E3; }
 
 #pattern-usage {
-  top: 480px; }
+}
 
 #photography {
   margin-bottom: 40px; }
 
 #iconography {
-  top: 600px; }
+}
 
-#iconography-library {
+#iconography {
   margin-bottom: 40px; }
 
 .icon-library-img {
   width: 100%;
   margin: 40px 0; }
 
-.iconography-download-btn {
+.download-btn {
   margin-top: 24px; }
 
 #logo {
-  top: 630px; }
+ }
 
 #bg-ads {
   padding-top: 50px;

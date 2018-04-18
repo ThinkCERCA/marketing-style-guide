@@ -162,7 +162,7 @@ b {
   border-left: 2px solid #FFB500; }
 
 #brand-guidelines {
-  background-image: url("/img/asset-green-2.png");
+  background-image: url("../img/asset-green-2.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 612px;
@@ -205,7 +205,7 @@ b {
   height: 537px; }
 
 .designer-starter-kit-imgs-row-1 {
-  background-image: url("/img/home/design-starter-kit-top.png");
+  background-image: url("../img/home/design-starter-kit-top.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px; }
@@ -216,7 +216,7 @@ b {
 .designer-starter-kit-imgs-row-2-left {
   height: 100%;
   background: #0A4BB8;
-  background-image: url("/img/asset-blue-3.png");
+  background-image: url("../img/asset-blue-3.png");
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center; }
@@ -239,7 +239,7 @@ b {
   outline: none;
   margin-top: 33px; }
 
-#our-purpose {
+#purpose {
   height: 805px; }
 
 .our-purpose-title {
@@ -253,13 +253,13 @@ b {
   margin-bottom: 29px; }
 
 #our-purpose-img {
-  background-image: url("/img/home/our-purpose.png");
+  background-image: url("../img/home/our-purpose.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 805px; }
 
-#our-promise {
+#promise {
   background: #307FE2;
   color: #FFFFFF;
   padding-top: 61px;
@@ -279,13 +279,13 @@ b {
   border-bottom: 2px solid; }
 
 #yellow-row {
-  background-image: url("/img/home/asset-yellow-1.png");
+  background-image: url("../img/home/asset-yellow-1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 318px; }
 
-#our-principles {
+#principles {
   padding-top: 57px;
   padding-bottom: 40px; }
 
@@ -302,13 +302,13 @@ b {
   line-height: 43px;
   margin-bottom: 1em; }
 
-#our-mantra {
+#mantra {
   background: #307FE2;
   color: #FFFFFF; }
 
 #our-mantra-img {
   height: 926px;
-  background-image: url("/img/home/our-mantra.png");
+  background-image: url("../img/home/our-mantra.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
