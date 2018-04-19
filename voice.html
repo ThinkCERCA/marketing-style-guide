@@ -48,7 +48,7 @@
 					<div class="row considerations-icon-row">
 						{% for item in style if item.section == 'graphics' and item.type == 'considerations' %}
 							<div class="col-sm-4 consideration">
-								<img class="considerations-icon" src="img/Voice/{{ item.value }}.png" style="margin-bottom: {{ item.example_code  }}px;">
+								<img class="considerations-icon" src="img/voice/{{ item.use_case }}.png" style="margin-bottom: {{ item.example_code  }}px;">
 								<h1 class="considerations-h1-underline">
 									{{ item.value }}
 								</h1>
@@ -67,7 +67,7 @@
 							<div class="row">
 								{% for item in style if item.section == 'icons' and item.type == 'platforms' %}
 									<div class="col-md-4 content-strategy-item">
-										<img class="content-strategy-icon" src="img/Voice/{{ item.value }}.svg">
+										<img class="content-strategy-icon" src="img/voice/{{ item.value }}.svg">
 										<h3 class="content-strategy-h3">{{ item.value|upper }}</h3>
 									</div>
 									{% if loop.index % 3 == 0 %}
